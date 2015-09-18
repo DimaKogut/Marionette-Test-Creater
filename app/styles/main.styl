@@ -1,0 +1,312 @@
+// body
+//   font-family: 'Courgette', sans-serif
+//   background-color: #fff
+
+// h1, h2, h3, h3, h5, h6
+//   font-family: 'Courgette', sans-serif
+//   // font-weight: bold
+
+// h1
+//   text-align: center
+
+// .list-group-item
+//   .check
+//     margin-right: 10px
+
+//   .check
+//     cursor: pointer
+
+//   .text
+//     color: #333333
+//     cursor: pointer
+//     &:active
+//       color: #333333
+//     &:hover
+//       color: #333333
+//       text-decoration: none
+
+//     &.checked
+//       text-decoration: line-through
+
+//   &.active
+//     .text
+//       font-size: 20px
+
+// .module-box > div.blank
+//   background-color: #f0f0f0
+//   border: 2px dashed #e0e0e0
+//   margin-bottom: 20px
+//   border-radius(5px)
+//   text-align: center
+//   .btn
+//     margin: 10px
+
+// .footer
+//   margin-top: 3em
+//   text-align: center
+
+
+// =========
+// #3278b3
+
+html,
+body,
+ul,
+ol,
+#title>h3
+  margin 0
+  padding 0
+
+
+a, a:hover, a:active
+  color inherit
+
+body
+  background-color #F7F7F9
+  font-family 'ChalkboardSE-Regular', sans-serif
+  min-width 1200px
+
+@font-face
+  font-family ChalkboardSE-Regular
+  src url(ChalkboardS.ttf)
+
+@mixin
+  border-radius($radius)
+    -webkit-border-radius $radius
+    -moz-border-radius $radius
+    -ms-border-radius $radius
+    border-radius $radius
+
+#title
+  text-align center
+  margin 20px 100px 0px 100px
+  padding 17px
+  font-family 'Courgette', cursive
+
+.answer_it
+  font-size 40px
+
+.button
+  cursor pointer
+  height 40px
+  width 278px
+  border 1px solid hsl(192, 67%, 46%)
+  color hsl(192, 67%, 46%)
+  text-align center
+  line-height 38px
+  font-size 17px
+  transition-delay 1s
+  transition all 200ms linear
+  &:hover
+    color white
+    background-color hsl(192, 67%, 46%)
+    transition-delay 1s
+    transition all 200ms linear
+
+.containar
+  float left
+  background-color rgba(255, 255, 255, 0.47)
+  padding 0px 20px
+  box-shadow 0px 0px 5px 2px rgba(0, 0, 0, 0.11)
+
+.content
+  width 582px
+  margin 0px 20px
+  padding 0px 30px 30px 30px
+  background-color rgba(255, 255, 255, 0.47)
+  box-shadow 0px 0px 5px 2px rgba(0, 0, 0, 0.11)
+
+input#name,
+input#age,
+input#country
+  float right
+  width 200px
+  height 35px
+  border-bottom 1px solid
+
+textarea:focus,
+input:focus
+  outline 0
+
+input
+  border none
+  &:focus
+    border none
+  &.edit_input
+    background-color aliceblue
+    width 100px
+
+p
+  font-size 17px
+  margin 20px 0px
+  line-height 2
+  &.list
+    font-size 17px
+    margin 10px 0px
+    line-height 2
+    float left
+    width 25%
+    padding-left 10px
+    &.delete
+      width 23%
+
+input[type=text]
+  color hsl(192, 67%, 46%)
+  font-size 17px
+  padding 0px 5px
+  width 300px
+  background-color inherit
+
+.tables
+  margin-bottom 20px
+  float left
+  width 25%
+  padding-left 10px
+
+.user_list
+  &.none
+    padding 10px
+    text-align center
+
+.list
+  &.delete
+    border 1px solid rgb(223, 23, 23)
+    text-align center
+    color rgb(223, 23, 23)
+    padding-left 0px
+    cursor pointer
+    transition-delay 1s
+    transition all 200ms linear
+    &:hover
+      background-color rgb(223, 23, 23)
+      color white
+
+
+  input#search
+    float right
+  #users_l
+    width 200px
+    float left
+  .user_list
+    &.list
+      width 522px
+      height 67px
+
+.hr
+  border-top 1px solid rgba(51, 51, 48, 0.14)
+
+.hrs
+  margin-top 0px
+  border-top 1px solid rgba(51, 51, 48, 0.14)
+
+#list
+  min-height 96px
+  max-height 576px
+  overflow auto
+  &::-webkit-scrollbar
+    -webkit-appearance none
+    width 4px
+  &::-webkit-scrollbar-thumb
+    border-radius 10px
+    background-color rgb(249, 228, 228)
+
+li
+  &.naba
+    cursor pointer
+    float left
+    list-style-type none
+    text-align center
+    // width 32%
+    width 245px
+    line-height 40px
+    &:hover
+      -webkit-box-shadow inset 0px 0px 37px 0px rgba(0, 0, 0, 0.11)
+      -moz-box-shadow inset 0px 0px 37px 0px rgba(0, 0, 0, 0.11)
+      box-shadow inset 0px 0px 37px 0px rgba(0, 0, 0, 0.11)
+
+#nav
+  text-align center
+  margin: 0px 86px 20px 85px;
+  background-color rgba(255, 255, 255, 0.47)
+  height 40px
+  box-shadow 0px 0px 5px 2px rgba(0, 0, 0, 0.11)
+  display block
+
+.user_item_view
+  height 56px
+  border-bottom 1px solid rgba(51, 51, 48, 0.14)
+
+.main_block
+  margin 20px 100px 100px 100px
+  position relative
+  min-height 310px
+
+.inner_resize
+  position relative
+  height inherit
+  width 100%
+  min-height 270px
+
+.test_create_form
+  width 140px
+  height 50px
+  text-align center
+  position absolute
+  padding 15px
+  top 0
+  bottom 0
+  left 0
+  right 0
+  margin auto
+  background-color rgba(255, 255, 255, 0.47)
+  box-shadow 0px 0px 5px 2px rgba(0, 0, 0, 0.11)
+  cursor pointer
+  &.resize
+    width 100%
+    height 100%
+    -webkit-transition width 500ms ease-in-out, height 500ms ease-in-out
+    -moz-transition width 500ms ease-in-out, height 500ms ease-in-out
+    -o-transition width 500ms ease-in-out, height 500ms ease-in-out
+    transition width 500ms ease-in-out, height 500ms ease-in-out
+    cursor default
+
+.test_add_button
+  float right
+  width 120px
+  padding 10px
+  cursor pointer
+  box-shadow 0px 5px 10px 2px rgba(0, 0, 0, 0.11)
+  display none
+  background-color hsla(128, 100%, 73%, 0.52)
+  text-align center
+
+.test_remove_button
+  float right
+  width 148px
+  padding 10px
+  cursor pointer
+  box-shadow 0px 5px 10px 2px rgba(0, 0, 0, 0.11)
+  display none
+  background-color indianred
+  text-align center
+  margin-left 20px
+
+.test_add_button.active, .test_remove_button.active
+  display block
+
+.inner_new_question
+  margin-top 20px
+  width 100%
+  height 305px
+  background-color rgba(255, 255, 255, 0.47)
+  box-shadow 0px 0px 5px 2px rgba(0, 0, 0, 0.11)
+
+.new_test_question
+  padding-top 70px
+
+.question_counter
+  text-align center
+  padding 20px
+  font-size 17px
+  font-family 'Courgette', cursive
+
