@@ -20,7 +20,8 @@ class App extends Backbone.Marionette.Application
     # console.log @router
 
     @addInitializer( (options) =>
-      (new AppView()).render()
+      @baseView = new AppView()
+      @baseView.render()
     )
 
     @addInitializer( (options) =>

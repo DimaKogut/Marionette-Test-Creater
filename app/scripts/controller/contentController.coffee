@@ -1,11 +1,19 @@
-ContentView = require '../views/ContentView'
+TestCreateView = require '../views/TestCreateView'
+UserListView = require '../views/UserListView'
+
 
 module.exports = class ContentController extends Marionette.Controller
 
+  testCreateShow: ->
+
+    view = new TestCreateView()
+    @mainView.content.show view
+
   testListShow: ->
-    console.log @mainView
-    @mainView.content.show new ContentView()
+
+    console.log 'userListShow'
 
   userListShow: ->
 
-    console.log 'userListShow'
+    view = new UserListView()
+    @mainView.content.show view

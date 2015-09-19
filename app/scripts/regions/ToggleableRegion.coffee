@@ -1,15 +1,16 @@
-ContentView = require '../views/ContentView'
+TestCreateView = require '../views/TestCreateView'
 
 module.exports = class ToggleableRegion extends Backbone.Marionette.Region
+
   initialize: (options) ->
-    console.log 'sdsds'
+
     # @module = options.module
     # @module.region = @
 
     @initShow()
 
   initShow: ->
-    @emptyView = new ContentView()
+    @emptyView = new TestCreateView()
     @show(@emptyView)
     @emptyView.on 'resizes', ->        # it's my prytty example, how event triggers works
       console.log 'it"s clicked'

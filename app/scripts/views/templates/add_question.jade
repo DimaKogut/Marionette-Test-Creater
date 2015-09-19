@@ -1,0 +1,16 @@
+.inner_new_question
+  .question_counter
+    | Question #
+    span.question_number= question_number
+    .question_text
+      input#answer(type="text" name='answer' placeholder="Your Question", autofocus)
+    .static_answer
+      .first_answer
+        input.answer(type="text" name='answer' placeholder="1. Your first answer here...", autofocus)
+      .second_answer
+        input.answer(type="text" name='answer' placeholder="2. Your first second here...", autofocus)
+    .answer_region
+.test_remove_button.active
+  | Remove Question
+.test_add_button
+  | Add Question

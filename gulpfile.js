@@ -70,6 +70,7 @@ gulp.task('scripts', function() {
       extensions: ['.coffee', '.jade']
     }))
     .pipe(concat('index.js'))
+    .pipe(livereload());
 
   if (environment == 'production') {
     stream.pipe(uglify())
