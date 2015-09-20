@@ -159,15 +159,17 @@ input[type=text]
   width 300px
   background-color inherit
   display block
+  font-family 'ChalkboardSE-Regular', sans-serif
+
 input.answer
   border-bottom 1px solid rgba(51,51,48,0.14)
   margin 15px
-  width 500px
+  width 85%
+  float left
 
 input#answer
-    width 500px
+    width 82%
     margin 10px auto
-    text-align center
 
 .tables
   width 25%
@@ -317,9 +319,11 @@ li
 
 .inner_new_question
   width 100%
-  height 305px
+  min-height 305px
+  overflow hidden
   background-color rgba(255, 255, 255, 0.47)
   box-shadow 0px 0px 5px 2px rgba(0, 0, 0, 0.11)
+  padding-bottom 30px
 
 .new_test_question
   padding-top 50px
@@ -338,10 +342,47 @@ li
 .content_inner_block
   margin 0px 100px 20px 100px
 
+#answer_region
+    float left
+    width 100%
+
 .glyphicon
   float left
   top 5px !important
   margin-left 12px
+
+.glyphicon.glyphicon-ok, .glyphicon.glyphicon-remove
+  color #ABA9A9
+  margin-top 17px
+
+.glyphicon.glyphicon-ok
+  cursor pointer
+
+.glyphicon
+  &.glyphicon-plus
+    color #ABA9AD
+    cursor pointer
+    float right
+    margin 13px 43px
+
+.glyphicon-plus:hover
+    color rgba(80, 226, 100, 0.52)
+
+.glyphicon.glyphicon-remove
+  opacity 0.5
+
+.glyphicon.glyphicon-remove.color
+  opacity 1
+  cursor pointer
+  &:hover
+    color rgb(205, 92, 92)
+
+
+.glyphicon.glyphicon-ok:hover
+  color rgba(80, 226, 100, 0.52)
+
+.glyphicon.glyphicon-ok:active
+  color rgba(80, 226, 100, 0.52)
 
 .table_title
   display block
