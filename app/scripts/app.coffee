@@ -37,7 +37,6 @@ class App extends Backbone.Marionette.Application
       Backbone.history.start()
     )
 
-    # @module('Notification', NotificationModule)
     # @module('Todo', TodoModule)
     @module 'Content', ContentModule
 
