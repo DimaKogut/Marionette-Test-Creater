@@ -1,0 +1,48 @@
+categoryData= {
+    "Category": [
+        {
+            "1": "English",
+            "2": "IT",
+            "3": "Web-UI",
+            "4": "Geography",
+            "5": "History"
+        }
+    ],
+    "Subcategory": [
+        {
+          "1":"Styling CSS",
+          "2":"Backbone",
+          "3":"JS Developing",
+          "4":"AJAX nolige",
+          "5":"Web Architecture"
+        },
+        {
+          "1":"Styling CSS",
+          "2":"Backbone",
+          "3":"JS Developing",
+          "4":"AJAX nolige",
+          "5":"Web Architecture"
+        },
+        {
+          "1":"Styling CSS",
+          "2":"Backbone",
+          "3":"JS Developing",
+          "4":"AJAX nolige",
+          "5":"Web Architecture"
+        },
+        {
+          "1":"Styling CSS",
+          "2":"Backbone",
+          "3":"JS Developing",
+          "4":"AJAX nolige",
+          "5":"Web Architecture"
+        },
+        {
+          "1":"Styling CSS",
+          "2":"Backbone",
+          "3":"JS Developing",
+          "4":"AJAX nolige",
+          "5":"Web Architecture"
+        }
+    ]
+}

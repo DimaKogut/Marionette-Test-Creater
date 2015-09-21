@@ -7,17 +7,17 @@ window.Behaviors.Closeable = require './behaviors/Closeable'
 ToggleableRegion = require './regions/ToggleableRegion'
 AppView = require './views/AppView'
 TodoModule = require('./modules/todo/TodoModule')
-NotificationModule = require('./modules/notification/NotificationModule')
-
 
 ContentModule = require './modules/ContentModules'
+
+DataJson = require './data/data.json'
 
 class App extends Backbone.Marionette.Application
   initialize: =>
     console.log 'Initializing app...'
 
     # @router = new Router()
-    # console.log @router
+    console.log DataJson.Subcategory
 
     @addInitializer( (options) =>
       @baseView = new AppView()

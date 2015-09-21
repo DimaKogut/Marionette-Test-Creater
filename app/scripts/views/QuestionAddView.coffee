@@ -17,7 +17,7 @@ class NewQuestion extends Marionette.LayoutView
       @model.set 'number_of_answer', @answer_modal.length
       @count_number_of_answer()
       @onShow()
-    @listenTo @answer_modal, 'change', (data) ->
+    @listenTo @answer_modal, 'change:answer_save', (data) ->
       console.log 'dscsd'
       n = data.get 'answer_number'
       @model.set 'answer_save_' + n + '', data.get 'answer_save'
@@ -26,7 +26,7 @@ class NewQuestion extends Marionette.LayoutView
       k = data.get 'answer_number'
       o = if i == true then k else ''
       @model.set 'correct_answer', o
-      @recheck_correct_answer()
+      # @recheck_correct_answer()
 
     n = 0
     correct = @model.get 'correct_answer'

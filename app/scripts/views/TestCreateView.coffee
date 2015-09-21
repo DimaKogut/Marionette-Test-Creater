@@ -1,3 +1,4 @@
+TestAttribute = require './NewTestAttribute'
 QuestionAddView = require './QuestionAddView'
 
 TestQuestions = Backbone.Collection.extend({})
@@ -19,21 +20,19 @@ module.exports = class TestCreateView extends Marionette.LayoutView
     text_button: '.test_create_form'
 
   events:
-    'click .test_create_form' : 'resize'
+    'click .add' : 'resize'
     'click .test_add_button'  : 'add_question'
 
-  # triggers:
-  #   'click .test_create_form': 'resizes'
-
   regions:
-    question: '.question_add'
+    question:      '.question_add'
+    new_test_main: '.test_create_form'
 
   resize: (e) ->
-
-    App.vent.trigger 'new:click', 'it"s clicked'
-
     $(e.currentTarget).addClass('resize')
     this.ui.text_button.html(' ')
+    $('.add').removeClass('add')
+    @TestAttribute = new TestAttribute()
+    @new_test_main.show @TestAttribute
     @add_button()
 
   add_button: ->
