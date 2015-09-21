@@ -1,6 +1,8 @@
 AnswerList = require './AnswerList'
 
+
 AnswerCollection = Backbone.Collection.extend({})
+
 
 class NewQuestion extends Marionette.LayoutView
 
@@ -8,6 +10,7 @@ class NewQuestion extends Marionette.LayoutView
   template: require './templates/add_question'
 
   initialize: ->
+    @model = @model
     @answer_modal = new AnswerCollection()
     @counter = @model.get 'number_of_answer'
     @listenTo @answer_modal, 'remove', ->
@@ -15,10 +18,19 @@ class NewQuestion extends Marionette.LayoutView
       @count_number_of_answer()
       @onShow()
     @listenTo @answer_modal, 'change', (data) ->
+      console.log 'dscsd'
       n = data.get 'answer_number'
-      console.log n
       @model.set 'answer_save_' + n + '', data.get 'answer_save'
+    @listenTo @answer_modal, 'change:correct', (data) ->
+      i = data.get 'correct'
+      k = data.get 'answer_number'
+      o = if i == true then k else ''
+      @model.set 'correct_answer', o
+      @recheck_correct_answer()
+
     n = 0
+    correct = @model.get 'correct_answer'
+    @correct = if correct != '' then correct else false
     while n < @counter
       l = n + 1
       save_answer = @model.get 'answer_save_' + l + ''
@@ -26,6 +38,8 @@ class NewQuestion extends Marionette.LayoutView
       @answer_modal.push
         answer_number: n + 1
         answer_save: p
+        correct_answer: @correct
+        correct: false
       n++
 
   events:
@@ -43,9 +57,18 @@ class NewQuestion extends Marionette.LayoutView
       n++
     @onShow()
 
+  recheck_correct_answer: ->
+    correct = @model.get 'correct_answer'
+    correct = if correct != '' then correct else false
+    n = 0
+    while n < @answer_modal.models.length
+      @answer_modal.models[n].set 'correct_answer', correct
+      n++
+    @onShow()
+
   onShow: ->
-    console.log @answer_modal
-    @answer_region.show new AnswerList collection: @answer_modal
+    @AnswerList = new AnswerList collection: @answer_modal
+    @answer_region.show @AnswerList
     if @answer_modal.models.length > 2 then @$('.glyphicon-remove').addClass 'color' else @$('.glyphicon-remove').removeClass 'color'
 
   add_answer: ->
@@ -53,8 +76,11 @@ class NewQuestion extends Marionette.LayoutView
     @answer_modal.push
       answer_number: counter + 1
       answer_save: ''
+      correct_answer: false
     @model.set 'number_of_answer', @answer_modal.length
-    @onShow()
+    correct = @model.get 'correct_answer'
+    @correct = if correct != '' then correct else false
+    if @correct != false then @recheck_correct_answer() else @onShow()
 
   remove_question: ->
     @model.destroy()
@@ -67,4 +93,3 @@ module.exports = class QuestionAddView extends Marionette.CollectionView
 
   childView: NewQuestion
   emptyView: ''
-

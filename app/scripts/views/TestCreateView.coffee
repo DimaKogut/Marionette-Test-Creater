@@ -46,7 +46,7 @@ module.exports = class TestCreateView extends Marionette.LayoutView
     @question_list.push
       question_number: 0
       answer: 'Your answer'
-      correct_answer: 'Your correct answer'
+      correct_answer: ''
       number_of_answer: 2
       question_save: ''
     @question_counter()

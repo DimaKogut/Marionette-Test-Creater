@@ -1,4 +1,5 @@
-input.answer(type="text" name='answer' value='' + answer_save + '' placeholder="" + answer_number + ". Your first answer here...", autofocus)
-.glyphicon.glyphicon-ok(aria-hidden='true')
+input.answer(type="text" name='answer' value='' + answer_number_concat(answer_save, answer_number) + ''  placeholder="" + answer_number + ". Your first answer here...", autofocus)
+.correct.glyphicon.glyphicon-ok(aria-hidden='true' class='' + correct_answer_specify(answer_number,correct_answer) + '')
 .remove_answer.glyphicon.glyphicon-remove(aria-hidden='true')
+
 
