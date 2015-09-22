@@ -1,10 +1,13 @@
 .description
   input#test_name(type="text" name='answer' value='' placeholder="Test Name...", autofocus)
+  .category_specify
+    .category_specify
+    .subcategory_specify
   textarea#answer(type='text', name='answer', value='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, odio veritatis fugit sunt perferendis iste nihil quidem totam dolores accusantium odit autem sapiente error consectetur aliquam, corrupti! Tempore suscipit, veniam.', placeholder='Test Description...', autofocus='autofocus')
 .category
   .add_cat_sub
-    input.cat(type="text" name='answer' value='' placeholder="Category +", autofocus)
-    input.cat(type="text" name='answer' value='' placeholder="Subcategory +", autofocus)
+    input.cat#cat(type="text" name='answer' value='' placeholder="Category +", autofocus)
+    input.cat#sub(type="text" name='answer' value='' placeholder="Subcategory +", disabled='disabled', autofocus)
   .left_cat_region
   .right_sub_region
 

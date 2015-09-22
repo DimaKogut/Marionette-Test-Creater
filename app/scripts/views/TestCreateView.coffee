@@ -8,9 +8,7 @@ module.exports = class TestCreateView extends Marionette.LayoutView
   template: require './templates/test_create'
 
   initialize: ->
-
     @question_list = new TestQuestions()
-
     @listenTo @question_list, 'remove', ->
       @question_counter()
       @add_button()
@@ -23,6 +21,7 @@ module.exports = class TestCreateView extends Marionette.LayoutView
   events:
     'click .add' : 'resize'
     'click .test_add_button'  : 'add_question'
+    'keypress .cat' : 'add_category'
 
   regions:
     question:      '.question_add'
@@ -38,8 +37,12 @@ module.exports = class TestCreateView extends Marionette.LayoutView
       $('.test_attribute').show()
     @add_button()
 
-  add_test_description: ->
-
+  add_category: (e) ->
+    if e.keyCode == 13
+      input = $(e.currentTarget)
+      trigger_name = $(input).attr 'id'
+      if input.val() != '' then App.vent.trigger 'add:' + trigger_name + '', input.val()
+      input.val('')
 
   add_button: ->
     setTimeout (->

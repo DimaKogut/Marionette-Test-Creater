@@ -1,55 +1,10 @@
-// body
-//   font-family: 'Courgette', sans-serif
-//   background-color: #fff
 
-// h1, h2, h3, h3, h5, h6
-//   font-family: 'Courgette', sans-serif
-//   // font-weight: bold
-
-// h1
-//   text-align: center
-
-// .list-group-item
-//   .check
-//     margin-right: 10px
-
-//   .check
-//     cursor: pointer
-
-//   .text
-//     color: #333333
-//     cursor: pointer
-//     &:active
-//       color: #333333
-//     &:hover
-//       color: #333333
-//       text-decoration: none
-
-//     &.checked
-//       text-decoration: line-through
-
-//   &.active
-//     .text
-//       font-size: 20px
-
-// .module-box > div.blank
-//   background-color: #f0f0f0
-//   border: 2px dashed #e0e0e0
-//   margin-bottom: 20px
-//   border-radius(5px)
-//   text-align: center
-//   .btn
-//     margin: 10px
-
-// .footer
-//   margin-top: 3em
-//   text-align: center
-
-
-// =========
-// #3278b3
 n = 0px 100px 20px 100px //mixin
-// margin (n)
+$font-stack = 'ChalkboardSE-Regular', sans-serif
+$font-title = 'Courgette', cursive
+$shadow = inset 0px 0px 37px 0px rgba(0, 0, 0, 0.11)
+$border = 1px solid rgba(51,51,48,0.14)
+// mixin
 
 html,
 body,
@@ -59,13 +14,12 @@ ol,
   margin 0
   padding 0
 
-
 a, a:hover, a:active
   color inherit
 
 body
   background-color #F7F7F9
-  font-family 'ChalkboardSE-Regular', sans-serif
+  font-family $font-stack
   min-width 1200px
 
 @font-face
@@ -83,7 +37,7 @@ body
   text-align center
   margin 20px 100px 0px 100px
   padding 17px
-  font-family 'Courgette', cursive
+  font-family $font-title
 
 .answer_it
   font-size 40px
@@ -159,10 +113,10 @@ input[type=text]
   width 300px
   background-color inherit
   display block
-  font-family 'ChalkboardSE-Regular', sans-serif
+  font-family $font-stack
 
 input.answer
-  border-bottom 1px solid rgba(51,51,48,0.14)
+  border-bottom $border
   margin 15px
   width 85%
   float left
@@ -175,7 +129,7 @@ textarea#answer
   border none
   background-color #FBFBFC
   resize none
-  font-family 'ChalkboardSE-Regular', sans-serif
+  font-family $font-stack
   color #969696
 
 input#answer
@@ -254,13 +208,13 @@ li
     width 245px
     line-height 40px
     &:hover
-      -webkit-box-shadow inset 0px 0px 37px 0px rgba(0, 0, 0, 0.11)
-      -moz-box-shadow inset 0px 0px 37px 0px rgba(0, 0, 0, 0.11)
-      box-shadow inset 0px 0px 37px 0px rgba(0, 0, 0, 0.11)
+      -webkit-box-shadow $shadow
+      -moz-box-shadow $shadow
+      box-shadow $shadow
   &.naba.active
-    -webkit-box-shadow inset 0px 0px 37px 0px rgba(0, 0, 0, 0.11)
-    -moz-box-shadow inset 0px 0px 37px 0px rgba(0, 0, 0, 0.11)
-    box-shadow inset 0px 0px 37px 0px rgba(0, 0, 0, 0.11)
+    -webkit-box-shadow $shadow
+    -moz-box-shadow $shadow
+    box-shadow $shadow
 
 #nav
   text-align center
@@ -349,10 +303,10 @@ li
   text-align center
   padding 20px
   font-size 17px
-  font-family 'Courgette', cursive
+  font-family $font-title
 
 .user_list.list
-  border-bottom 1px solid rgba(51,51,48,0.14)
+  border-bottom $border
 
 .content_inner_block
   margin 0px 100px 20px 100px
@@ -369,6 +323,8 @@ li
 .glyphicon.glyphicon-ok, .glyphicon.glyphicon-remove
   color #ABA9A9
   margin-top 17px
+  transition-delay 0.5s
+  transition all 100ms linear
 
 .glyphicon.glyphicon-ok
   cursor pointer
@@ -379,9 +335,13 @@ li
     cursor pointer
     float right
     margin 13px 43px
+    transition-delay 0.5s
+    transition all 100ms linear
 
 .glyphicon-plus:hover
     color rgba(80, 226, 100, 0.52)
+    transition-delay 0.5s
+    transition all 100ms linear
 
 .glyphicon.glyphicon-remove
   opacity 0.5
@@ -391,9 +351,13 @@ li
   cursor pointer
   &:hover
     color rgb(205, 92, 92)
+    transition-delay 0.5s
+    transition all 100ms linear
 
 
 .glyphicon.glyphicon-ok:hover
+  transition-delay 0.5s
+  transition all 100ms linear
   color rgba(80, 226, 100, 0.52)
 
 .glyphicon.glyphicon-ok.color_correct
@@ -401,7 +365,7 @@ li
 
 .table_title
   display block
-  border-bottom 1px solid rgba(51,51,48,0.14)
+  border-bottom $border
 
 .main_conteinar
   margin n
@@ -414,7 +378,7 @@ li
 
 input#test_name
     width 100%
-    padding-left 16px
+    padding-left 70px
     padding-right 20px
 
 .description
@@ -429,26 +393,30 @@ input#test_name
   width 30%
   li
     list-style-type none
-    font-family 'ChalkboardSE-Regular', sans-serif
-    border-bottom 1px solid rgba(51,51,48,0.14)
+    font-family $font-stack
+    border-bottom $border
     cursor: pointer
     text-align left
     padding-left 6px
     padding-bottom 3px
+    transition-delay 1s
+    transition all 100ms linear
     &:hover
-      -webkit-box-shadow inset 0px 0px 37px 0px rgba(0, 0, 0, 0.11)
-      -moz-box-shadow inset 0px 0px 37px 0px rgba(0, 0, 0, 0.11)
-      box-shadow inset 0px 0px 37px 0px rgba(0, 0, 0, 0.11)
+      -webkit-box-shadow $shadow
+      -moz-box-shadow $shadow
+      box-shadow $shadow
+      transition-delay 1s
+      transition all 100ms linear
 
 .left_cat_region
   float left
-  border-right 1px solid rgba(51,51,48,0.14)
-  width 44.7%
+  border-right $border
+  width 44.8%
   overflow: scroll;
   max-height: 203px;
 
 .right_sub_region
-  width 55.3%
+  width 55.2%
   float right
 
 input.cat
@@ -458,24 +426,32 @@ input.cat
   height 100%
 
 input.cat:nth-of-type(1)
-  border-right 1px solid rgba(51,51,48,0.14)
+  border-right $border
   width 95px
 
 input.cat:nth-of-type(2)
   width 116px
 
 .add_cat_sub
-  border-bottom 1px solid rgba(51,51,48,0.14)
+  border-bottom $border
   height 30px
 
 .category_conteinar
-  .active
-    -webkit-box-shadow inset 0px 0px 37px 0px rgba(0, 0, 0, 0.11)
-    -moz-box-shadow inset 0px 0px 37px 0px rgba(0, 0, 0, 0.11)
-    box-shadow inset 0px 0px 37px 0px rgba(0, 0, 0, 0.11)
+  .choose
+    -webkit-box-shadow $shadow
+    -moz-box-shadow $shadow
+    box-shadow $shadow
 
 .sub_category_item
-  &.active
-    -webkit-box-shadow inset 0px 0px 37px 0px rgba(0, 0, 0, 0.11)
-    -moz-box-shadow inset 0px 0px 37px 0px rgba(0, 0, 0, 0.11)
-    box-shadow inset 0px 0px 37px 0px rgba(0, 0, 0, 0.11)
+  &.choose
+    -webkit-box-shadow $shadow
+    -moz-box-shadow $shadow
+    box-shadow $shadow
+
+.sub_category_empty
+  font-family $font-stack
+
+.sub_category_empty
+  padding 50% 0%
+  color darkgrey
+

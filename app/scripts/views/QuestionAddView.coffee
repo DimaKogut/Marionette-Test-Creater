@@ -1,8 +1,6 @@
 AnswerList = require './AnswerList'
 
-
 AnswerCollection = Backbone.Collection.extend({})
-
 
 class NewQuestion extends Marionette.LayoutView
 
@@ -26,7 +24,7 @@ class NewQuestion extends Marionette.LayoutView
       k = data.get 'answer_number'
       o = if i == true then k else ''
       @model.set 'correct_answer', o
-      # @recheck_correct_answer()
+      @recheck_correct_answer()
 
     n = 0
     correct = @model.get 'correct_answer'

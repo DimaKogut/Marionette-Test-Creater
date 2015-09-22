@@ -8,7 +8,7 @@ class CategoryItem extends Marionette.ItemView
     'click .inner' : 'sub_list_show'
 
   sub_list_show: ->
-    App.vent.trigger 'choose:subcategory', @model
+    App.vent.trigger 'choose:category', @model
 
 module.exports = class CategoryView extends Marionette.CollectionView
 
@@ -21,7 +21,6 @@ module.exports = class CategoryView extends Marionette.CollectionView
     'click .category_item' : 'choose_category'
 
   choose_category: (e) ->
-    @$('.active').removeClass 'active'
-    $(e.currentTarget).addClass 'active'
-
+    @$('.choose').removeClass 'choose'
+    $(e.currentTarget).addClass 'choose'
 

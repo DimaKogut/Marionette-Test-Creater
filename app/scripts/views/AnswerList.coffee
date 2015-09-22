@@ -31,7 +31,7 @@ class AnswerItem extends Marionette.ItemView
     @render()
 
   specify_answer: (e) ->
-    $('.color_correct').removeClass 'color_correct'
+    @$('.color_correct').removeClass 'color_correct'
     $(e.currentTarget).addClass 'color_correct'
     @model.set 'correct', true
 
