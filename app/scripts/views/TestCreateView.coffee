@@ -10,6 +10,7 @@ module.exports = class TestCreateView extends Marionette.LayoutView
   initialize: ->
 
     @question_list = new TestQuestions()
+
     @listenTo @question_list, 'remove', ->
       @question_counter()
       @add_button()
@@ -33,7 +34,12 @@ module.exports = class TestCreateView extends Marionette.LayoutView
     $('.add').removeClass('add')
     @TestAttribute = new TestAttribute()
     @new_test_main.show @TestAttribute
+    $(e.currentTarget).bind 'transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd', ->
+      $('.test_attribute').show()
     @add_button()
+
+  add_test_description: ->
+
 
   add_button: ->
     setTimeout (->

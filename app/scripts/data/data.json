@@ -1,48 +1,79 @@
 categoryData= {
-    "Category": [
-        {
-            "1": "English",
-            "2": "IT",
-            "3": "Web-UI",
-            "4": "Geography",
-            "5": "History"
-        }
+  "Category": [
+            "English",
+            "IT",
+            "Web-UI",
+            "Geography",
+            "History",
+            "Natural",
+            "Calture",
+            "Economy",
+            "Cinema"
+  ]
+}
+subcategoryData= {
+    "English": [
+          "Styling CSS",
+          "Backbone",
+          "JS Developing",
+          "AJAX nolige",
+          "Web Architecture"
+
     ],
-    "Subcategory": [
-        {
-          "1":"Styling CSS",
-          "2":"Backbone",
-          "3":"JS Developing",
-          "4":"AJAX nolige",
-          "5":"Web Architecture"
-        },
-        {
-          "1":"Styling CSS",
-          "2":"Backbone",
-          "3":"JS Developing",
-          "4":"AJAX nolige",
-          "5":"Web Architecture"
-        },
-        {
-          "1":"Styling CSS",
-          "2":"Backbone",
-          "3":"JS Developing",
-          "4":"AJAX nolige",
-          "5":"Web Architecture"
-        },
-        {
-          "1":"Styling CSS",
-          "2":"Backbone",
-          "3":"JS Developing",
-          "4":"AJAX nolige",
-          "5":"Web Architecture"
-        },
-        {
-          "1":"Styling CSS",
-          "2":"Backbone",
-          "3":"JS Developing",
-          "4":"AJAX nolige",
-          "5":"Web Architecture"
-        }
-    ]
+    "IT": [
+          "Backbone",
+          "JS Developing",
+          "AJAX nolige",
+          "Styling CSS",
+          "Web Architecture"
+    ],
+    "Web-UI":[
+          "AJAX nolige",
+          "Styling CSS",
+          "Backbone",
+          "JS Developing",
+          "Web Architecture"
+    ],
+    "Geography":[
+          "JS Developing",
+          "AJAX nolige",
+          "Styling CSS",
+          "Backbone",
+          "Web Architecture"
+    ],
+    "History":[
+          "Styling CSS",
+          "Backbone",
+          "JS Developing",
+          "AJAX nolige",
+          "Web Architecture"
+    ],
+    "Natural":[
+          "Styling CSS",
+          "Backbone",
+          "JS Developing",
+          "AJAX nolige",
+          "Web Architecture"
+    ],
+    "Calture":[
+          "Styling CSS",
+          "Backbone",
+          "JS Developing",
+          "AJAX nolige",
+          "Web Architecture"
+    ],
+    "Economy":[
+          "Styling CSS",
+          "Backbone",
+          "JS Developing",
+          "AJAX nolige",
+          "Web Architecture"
+    ],
+    "Cinema":[
+          "Styling CSS",
+          "Backbone",
+          "JS Developing",
+          "AJAX nolige",
+          "Web Architecture"
+    ],
 }
