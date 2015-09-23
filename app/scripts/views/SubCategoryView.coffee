@@ -9,6 +9,12 @@ class SubCategoryItem extends Marionette.ItemView
   className: 'sub_category_item'
   template: require './templates/subcategory_item_view'
 
+  events:
+    'click .inner_sub' : 'sub_category_choose'
+
+  sub_category_choose: ->
+    App.vent.trigger 'choose:subcategory', @model.get 'subcategory_name'
+
 module.exports = class SubCategoryView extends Marionette.CollectionView
 
   childView: SubCategoryItem
@@ -17,9 +23,6 @@ module.exports = class SubCategoryView extends Marionette.CollectionView
   events:
     'click .sub_category_item' : 'choose_category'
 
-  triggers:
-    'click .inner_sub' : 'hello'
-
   initialize: ->
     $('#sub').attr 'disabled', false
     $('#sub').focus()
@@ -27,7 +30,3 @@ module.exports = class SubCategoryView extends Marionette.CollectionView
   choose_category: (e) ->
     @$('.choose').removeClass 'choose'
     $(e.currentTarget).addClass 'choose'
-
-
-
-

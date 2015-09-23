@@ -17,8 +17,8 @@ module.exports = class TestAttribute extends Marionette.LayoutView
     'click .description' : 'category_add'
 
   ui:
-    category_specify: '.category_specify'
-    subcategory_specify: '.subcategory_specify'
+    category_specify: '.parent_specify'
+    subcategory_specify: '.child_specify'
 
   initialize: ->
     @category = new CategoryCollections()
@@ -28,10 +28,9 @@ module.exports = class TestAttribute extends Marionette.LayoutView
         category_name: categoryData.Category[n]
       n++
     @listenTo App.vent.on 'choose:category', @onshow_subcategory, @
-    @listenTo App.vent.on 'choose:subcategory', @onshow_subcategory, @
+    @listenTo App.vent.on 'choose:subcategory', @subcategory_choose, @
     @listenTo App.vent.on 'add:cat', @add_new_category, @
     @listenTo App.vent.on 'add:sub', @add_new_subcategory, @
-    # @listenTo @view.vent.on 'subcategory_choose', @add_new_subcategory, @
 
   onShow: ->
     @category_region.show new CategoryView collection: @category
@@ -50,6 +49,7 @@ module.exports = class TestAttribute extends Marionette.LayoutView
   onshow_subcategory: (data) ->
     n = data.get 'category_name'
     @ui.category_specify.html n
+    if @ui.subcategory_specify.html != '' then @ui.subcategory_specify.html ''
     sub_category = subcategoryData["" + n + ""]
     @subcategory = new SubCategoryCollections()
     if sub_category != undefined
@@ -60,14 +60,8 @@ module.exports = class TestAttribute extends Marionette.LayoutView
         n++
     @view = new SubCategoryView collection: @subcategory
     @subcategory_region.show @view
-    @view.on 'hello', ->
-      console.log 'hehwenw'
+    @view.on 'choose_category', ->
+      SubCategoryView.choose_category()
 
-  category_add = (e) ->
-    console.log 'cdsbhjcs'
-    if e.keyCode == 13
-      tb = document.getElementById('cat')
-      eval tb.value
-      return false
-
-
+  subcategory_choose: (data) ->
+    @ui.subcategory_specify.html data

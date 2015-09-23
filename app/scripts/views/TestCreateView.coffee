@@ -8,6 +8,8 @@ module.exports = class TestCreateView extends Marionette.LayoutView
   template: require './templates/test_create'
 
   initialize: ->
+    $('.navigator_active').removeClass 'navigator_active'
+    $('#test_create').addClass 'navigator_active'
     @question_list = new TestQuestions()
     @listenTo @question_list, 'remove', ->
       @question_counter()

@@ -8,6 +8,10 @@ module.exports = class UserListView extends Marionette.LayoutView
   regions:
     list: '#list'
 
+  initialize: ->
+    $('.navigator_active').removeClass 'navigator_active'
+    $('#user_list').addClass 'navigator_active'
+
   onShow: ->
     @list.show new UserView()
 

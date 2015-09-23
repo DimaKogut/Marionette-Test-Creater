@@ -17,7 +17,6 @@ class App extends Backbone.Marionette.Application
     console.log 'Initializing app...'
 
     # @router = new Router()
-    console.log DataJson.Subcategory
 
     @addInitializer( (options) =>
       @baseView = new AppView()

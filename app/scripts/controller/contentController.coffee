@@ -1,5 +1,5 @@
 TestCreateView = require '../views/TestCreateView'
-UserListView = require '../views/UserListView'
+UserListView = require '../views/users/UserListView'
 
 
 module.exports = class ContentController extends Marionette.Controller
