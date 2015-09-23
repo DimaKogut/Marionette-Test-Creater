@@ -1,4 +1,4 @@
-TestCreateView = require '../views/TestCreateView'
+TestCreateView = require '../views/test_create/TestCreateView'
 
 module.exports = class ToggleableRegion extends Backbone.Marionette.Region
 

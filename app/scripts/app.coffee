@@ -10,7 +10,8 @@ TodoModule = require('./modules/todo/TodoModule')
 
 ContentModule = require './modules/ContentModules'
 
-DataJson = require './data/data.json'
+DataJson = require './data/category.json'
+UsersData = require './data/users'
 
 class App extends Backbone.Marionette.Application
   initialize: =>
