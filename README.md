@@ -2,9 +2,7 @@
 
 This is a sample application using Backbone.js, Marionette.js, Twitter Bootstrap 3, Stylus, Jade and Coffeescript all bundled with Gulp.js
 
-
 ## Features
-
 
 ## Usage
 
