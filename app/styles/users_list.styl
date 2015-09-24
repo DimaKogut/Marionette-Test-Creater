@@ -41,6 +41,14 @@ $shadow = inset 0px 0px 37px 0px rgba(0, 0, 0, 0.11)
   padding 10px
   border-bottom 1px solid rgba(51, 51, 48, 0.14)
 
+.user_member
+  width 25%
+
+.user_activity
+  width 15%
+  padding-left 33px
+  text-align left
+
 .u_list_block
   height 41px
   cursor pointer
@@ -62,19 +70,19 @@ $shadow = inset 0px 0px 37px 0px rgba(0, 0, 0, 0.11)
 .user_test_data
   float left
   width 100%
-  height 200px
+  height 210px
   display none
   border-bottom 1px solid rgba(51, 51, 48, 0.14)
 
-canvas#pie-chart-area
+canvas.pie-chart-area
   float left
-  margin 15px 15px 0px
+  margin 15px 15px 10px
 
 .test_list_region
   width 79%
   float right
-  height 200px
-  padding 10px 20px 10px 0px
+  height 210px
+  padding 13px 20px 0px 0px
 
 .inner_slice
   float left
@@ -115,11 +123,54 @@ canvas#pie-chart-area
   color #CFCFD0
   text-align left
 
-.title_of_user_test_list.test_passed
-  width 32%
-
-.title_of_user_test_list.user_test_result
-  width 12%
-
 .title_of_user_test_list.user_test_name
   width 56%
+
+.title_of_user_test_list.test_passed
+  width 33.5%
+
+.title_of_user_test_list.user_test_result
+  width 10.5%
+
+.excellent
+.good
+.not_good
+  display block
+  border-radius 50%
+  height 10px
+  width 10px
+  float left
+  margin 4px 5px 0px 18px
+
+.excellent
+  background-color rgba(54,195,73,0.6)
+
+.good
+  background-color #FFC870
+
+.not_good
+  background-color #cd5c5c
+
+.excellent_mark
+.good_mark
+.bad_mark
+  float left
+  font-size 12px
+  width 13%
+  text-align left
+
+.load_more
+  display none
+  float right
+  font-family $font-stack
+  cursor pointer
+  margin-top 6px
+  color #B8B8B9
+  &:hover
+    color rgb(51, 51, 51)
+
+.load_more_value
+  float right
+
+.close_bracket
+  float right

@@ -13,19 +13,27 @@ class UserViewItem extends Marionette.LayoutView
 
   events:
     'click .u_list_block': 'slide_user'
+    'click .load_more' : 'load_more'
 
   regions:
     test_list_region: '.test_list_region'
 
-  slide_user: ->
-    n = if @$('.user_test_data').is(':hidden') then 241 else 41
+  slide_user: (e)->
+    m = $(e.currentTarget).parent().children()[1]
+    if $(m).is(':hidden') == true
+      if $('.user_test_data:visible').length == 1
+        $('.user_test_data:visible').slideToggle(500)
+        $('.user_test_data:visible').parent().animate {'height': '41px'}, 500
+    n = if @$('.user_test_data').is(':hidden') then 251 else 41
     @$('.user_item_view').animate {'height': '' + n + 'px'}, 500
+    @$('.user_test_data').css('height', '210px')
     @$('.user_test_data').slideToggle(500)
-    @show_modular(@model.get 'name')
-    @show_test_list_result()
+    @current_user = @model.get 'name'
     $('.showed').removeClass 'showed'
-    @$('.u_list_block').addClass 'showed'
-    console.log UsersTestResult['John Smith']
+    if n == 251
+      @show_modular(@model.get 'name')
+      @show_test_list_result(@current_user, 6)
+      @$('.u_list_block').addClass 'showed'
 
   show_modular: (options)->
     green = 0
@@ -42,12 +50,6 @@ class UserViewItem extends Marionette.LayoutView
 
     pieData = [
       {
-        value: red
-        color: '#cd5c5c'
-        highlight: '#FF5A5E'
-        label: 'Not good'
-      }
-      {
         value: green
         color: 'rgba(54,195,73,0.6)'
         highlight: 'rgba(117,255,136,0.52)'
@@ -59,21 +61,44 @@ class UserViewItem extends Marionette.LayoutView
         highlight: '#f0e68c'
         label: 'Good'
       }
+      {
+        value: red
+        color: '#cd5c5c'
+        highlight: '#FF5A5E'
+        label: 'Not good'
+      }
     ]
-    pie_ctx = document.getElementById('pie-chart-area').getContext('2d')
-    window.myPie = new Chart(pie_ctx).Pie(pieData, legendTemplate: '<ul class="<%=name.toLowerCase()%>-legend"><% for (var i=0; i<segments.length; i++){%><li><span style="background-color:<%=segments[i].fillColor%>"></span><%if(segments[i].label){%><%=segments[i].label%><%}%></li><%}%></ul>')
-    legend = myPie.generateLegend()
-    $("#legend").html legend
+    pie_ctx = document.getElementById('' + @model.get 'name' + '').getContext('2d')
+    window.myPie = new Chart(pie_ctx).Pie(pieData)
 
-  show_test_list_result: ->
+  show_test_list_result: (user_name, length) ->
     test_list = new TestListCollection()
-    UsersTestResult[1].forEach (data) ->
+    n = 0
+    if length == 6
+      length = if UsersTestResult["" + user_name + ""].length < 6 then UsersTestResult["" + user_name + ""].length else 6
+    else length = length
+    while n < length
       test_list.push
-        test_name:   data.test_name
-        data_passed: data.data_passed
-        result:      data.result
+        test_name:   UsersTestResult["" + user_name + ""][n].test_name
+        data_passed: UsersTestResult["" + user_name + ""][n].data_passed
+        result:      UsersTestResult["" + user_name + ""][n].result
+      n++
     @test_list = test_list
     @test_list_region.show new UserTestList collection: @test_list
+    m = UsersTestResult["" + user_name + ""].length - 6
+    if m > 0
+      @$('.load_more').show()
+      @$('.load_more_value').html m
+
+  load_more: (data)->
+    number = UsersTestResult['' +  @model.get 'name' + ''].length
+    @show_test_list_result(@current_user, number)
+    number -= 6
+    height_main_block = 251 + number * 23
+    height_inner_block = 210 + number * 23
+    @$('.user_item_view').animate {'height': '' + height_main_block + 'px'}, 200
+    @$('.user_test_data').animate {'height': '' + height_inner_block + 'px'}, 200
+    $('.load_more').hide()
 
 module.exports = class UserView extends Marionette.CollectionView
 

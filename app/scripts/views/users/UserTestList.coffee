@@ -9,7 +9,9 @@ class UserTestListItem extends Marionette.ItemView
 
 module.exports = class UserTestList extends Marionette.CompositeView
 
+  className: 'user_test_list_table'
   template: require './templates/user_test_list_conteinar'
 
   childView: UserTestListItem
+  childViewContainer: '.test_list_conteinar'
   emptyView: ''
