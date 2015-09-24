@@ -2,14 +2,18 @@
   span.glyphicon.glyphicon-search(aria-hidden='true')
   input#search(type='text', placeholder='typing search user here...')
 .table_title
-  span.tables
+  span.tables.order.dropup
     | Name
+    span(class="caret no_numerical" name='name')
   span.tables
     | Age
-  span.tables
+    span(class="caret numerical" name='age')
+  span.tables.order.dropup
     | Country
+    span(class="caret no_numerical" name='country')
   span.tables
     | Member
   span.tables
     | Activity
+    span(class="caret numerical" name='activity')
 #list

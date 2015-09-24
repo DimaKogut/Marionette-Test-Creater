@@ -14,7 +14,9 @@ module.exports = class UserListView extends Marionette.LayoutView
     list: '#list'
 
   events:
-    'keyup #search' : 'showSearchUser'
+    'keyup #search'       : 'showSearchUser'
+    'click .numerical'    : 'sort_user_list_numerical'
+    'click .no_numerical' : 'sort_user_list_no_numerical'
 
   initialize: ->
     $('.navigator_active').removeClass 'navigator_active'
@@ -29,10 +31,27 @@ module.exports = class UserListView extends Marionette.LayoutView
         activity: data.activity
     @user_collection = user_collection
 
-    @user_collection.comparator = (UserCollection) ->
-      -UserCollection.get('name')
-    @user_collection.sort('name')
-    console.log @user_collection
+    # reverseSortBy = (sortByFunction) ->
+    #   (left, right) ->
+    #     console.log left, right
+    #     l = sortByFunction(left)
+    #     r = sortByFunction(right)
+    #     if l == undefined
+    #       return -1
+    #     if r == undefined
+    #       return 1
+    #     if l < r then 1 else if l > r then -1 else 0
+
+    # @user_collection.comparator = (UserCollection) ->
+    #   UserCollection.get 'name'
+
+    # @user_collection.comparator = reverseSortBy(@user_collection.comparator)
+
+    # @user_collection.comparator = (UserCollection) ->
+    #   +UserCollection.get('age')
+
+    # @user_collection.sort('name')
+    # console.log @user_collection
 
   onShow: ->
     @list.show new UserView collection: @user_collection
@@ -52,7 +71,37 @@ module.exports = class UserListView extends Marionette.LayoutView
     @user_collection = user_collection
     @onShow()
 
+  sort_user_list_numerical: (e) ->
+    filter = $(e.currentTarget).attr 'name'
+    if $(e.currentTarget).hasClass 'descending'
+      $('.descending').removeClass 'descending'
+      $(e.currentTarget).addClass 'ascending'
+      @user_collection.comparator = (UserCollection) ->
+        -UserCollection.get filter
+      @user_collection.sort filter
+    else
+      $('.ascending').removeClass 'ascending'
+      $(e.currentTarget).addClass 'descending'
+      @user_collection.comparator = filter
+      @user_collection.sort filter
 
+  sort_user_list_no_numerical: (e) ->
+    filter = $(e.currentTarget).attr 'name'
 
+    reverseSortBy = (sortByFunction) ->
+      (left, right) ->
+        l = sortByFunction(left)
+        r = sortByFunction(right)
+        if l == undefined
+          return -1
+        if r == undefined
+          return 1
+        if l < r then 1 else if l > r then -1 else 0
+
+    @user_collection.comparator = (UserCollection) ->
+      UserCollection.get filter
+
+    @user_collection.comparator = reverseSortBy(@user_collection.comparator)
+    @user_collection.sort filter
 
 
