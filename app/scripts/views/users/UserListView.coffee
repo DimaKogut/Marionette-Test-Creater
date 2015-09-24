@@ -57,7 +57,6 @@ module.exports = class UserListView extends Marionette.LayoutView
     @list.show new UserView collection: @user_collection
 
   showSearchUser: (e) ->
-    console.log $(e.currentTarget).val()
     user_collection = new UserCollections()
     search = $(e.currentTarget).val()
     UsersData.forEach (data) ->
@@ -87,21 +86,26 @@ module.exports = class UserListView extends Marionette.LayoutView
 
   sort_user_list_no_numerical: (e) ->
     filter = $(e.currentTarget).attr 'name'
+    if $(e.currentTarget).hasClass 'descending'
+      $('.descending').removeClass 'descending'
+      $(e.currentTarget).addClass 'ascending'
+      reverseSortBy = (sortByFunction) ->
+        (left, right) ->
+          l = sortByFunction(left)
+          r = sortByFunction(right)
+          if l == undefined
+            return -1
+          if r == undefined
+            return 1
+          if l < r then 1 else if l > r then -1 else 0
 
-    reverseSortBy = (sortByFunction) ->
-      (left, right) ->
-        l = sortByFunction(left)
-        r = sortByFunction(right)
-        if l == undefined
-          return -1
-        if r == undefined
-          return 1
-        if l < r then 1 else if l > r then -1 else 0
+      @user_collection.comparator = (UserCollection) ->
+        UserCollection.get filter
 
-    @user_collection.comparator = (UserCollection) ->
-      UserCollection.get filter
-
-    @user_collection.comparator = reverseSortBy(@user_collection.comparator)
-    @user_collection.sort filter
-
-
+      @user_collection.comparator = reverseSortBy(@user_collection.comparator)
+      @user_collection.sort filter
+    else
+      $('.ascending').removeClass 'ascending'
+      $(e.currentTarget).addClass 'descending'
+      @user_collection.comparator = filter
+      @user_collection.sort filter
