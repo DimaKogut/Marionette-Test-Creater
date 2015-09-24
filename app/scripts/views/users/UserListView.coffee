@@ -30,8 +30,8 @@ module.exports = class UserListView extends Marionette.LayoutView
     @user_collection = user_collection
 
     @user_collection.comparator = (UserCollection) ->
-      UserCollection.get('name')
-    @user_collection.sort('age')
+      -UserCollection.get('name')
+    @user_collection.sort('name')
     console.log @user_collection
 
   onShow: ->
