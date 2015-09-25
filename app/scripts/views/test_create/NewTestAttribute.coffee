@@ -9,15 +9,15 @@ module.exports = class TestAttribute extends Marionette.LayoutView
   className: 'test_attribute'
   template: require './templates/test_attribute'
 
+  events:
+    'click .description' : 'category_add'
+
   regions:
     category_region:    '.left_cat_region'
     subcategory_region: '.right_sub_region'
 
-  events:
-    'click .description' : 'category_add'
-
   ui:
-    category_specify: '.parent_specify'
+    category_specify:    '.parent_specify'
     subcategory_specify: '.child_specify'
 
   initialize: ->
@@ -41,7 +41,6 @@ module.exports = class TestAttribute extends Marionette.LayoutView
     @onShow()
 
   add_new_subcategory: (data) ->
-    console.log @subcategory
     @subcategory.unshift
       subcategory_name: data
     @subcategory_region.show new SubCategoryView collection: @subcategory

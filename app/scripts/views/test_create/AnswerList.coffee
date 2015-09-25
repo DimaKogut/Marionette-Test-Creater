@@ -16,7 +16,6 @@ class AnswerItem extends Marionette.ItemView
       if data != '' then '' + number + '. ' + data + '' else ''
 
     correct_answer_specify: (number, correct_answer) ->
-      console.log number, correct_answer
       if correct_answer != false then if number == correct_answer then 'color_correct' else ''
 
   remove_answer: ->

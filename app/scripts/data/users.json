@@ -4,105 +4,105 @@ UsersData= [
           "age":"21",
           "country":"USA",
           "member":"from May 2014",
-          "activity":"6",
+          "activity":"6"
   },
   {
           "name":"John Dell",
           "age":"25",
           "country":"Canada",
           "member":"from June 2015",
-          "activity":"8",
+          "activity":"8"
   },
   {
           "name":"Meredith Patrick",
           "age":"29",
           "country":"Ireland",
           "member":"from March 2013",
-          "activity":"9",
+          "activity":"9"
   },
   {
           "name":"Dirk Clement",
           "age":"20",
           "country":"Chile",
           "member":"from September 2012",
-          "activity":"7",
+          "activity":"7"
   },
   {
           "name":"Brendan Oswald",
           "age":"31",
           "country":"Netherlands",
           "member":"from April 2014",
-          "activity":"10",
+          "activity":"10"
   },
   {
           "name":"Odin Herbert",
           "age":"24",
           "country":"Create Britain",
           "member":"from December 2013",
-          "activity":"6",
+          "activity":"6"
   },
   {
           "name":"Trueman Lance",
           "age":"41",
           "country":"USA",
           "member":"from January 2015",
-          "activity":"5",
+          "activity":"5"
   },
   {
           "name":"Quinton Baldric",
           "age":"18",
           "country":"Indonesia",
           "member":"from June 2013",
-          "activity":"9",
+          "activity":"9"
   },
   {
           "name":"Russell Kiefer",
           "age":"26",
           "country":"Costa Rica",
           "member":"from May 2015",
-          "activity":"9",
+          "activity":"9"
   },
   {
           "name":"Archer Ted",
           "age":"33",
           "country":"France",
           "member":"from August 2013",
-          "activity":"9",
+          "activity":"9"
   },
   {
           "name":"Auberon Shane",
           "age":"29",
           "country":"Finland",
           "member":"from July 2014",
-          "activity":"10",
+          "activity":"10"
   },
   {
           "name":"Camron Isador",
           "age":"17",
           "country":"Panama",
           "member":"from September 2014",
-          "activity":"13",
+          "activity":"13"
   },
   {
           "name":"Darwin Camden",
           "age":"25",
           "country":"Germany",
           "member":"from February 2014",
-          "activity":"9",
+          "activity":"9"
   },
   {
           "name":"Brice Monroe",
           "age":"27",
           "country":"Brazil",
           "member":"from October 2013",
-          "activity":"5",
+          "activity":"5"
   },
   {
           "name":"Tyron Kian",
           "age":"36",
           "country":"Canada",
           "member":"from February 2012",
-          "activity":"11",
+          "activity":"11"
   }
 ]
 UsersTestResult={

@@ -7,13 +7,22 @@
     .u_list.user_activity= activity
   .user_test_data
     canvas.pie-chart-area(width='120', height='120' id='' + name + '')
+    .test_list_title_block
+      .title_of_user_test_list.user_test_name
+        | Test name
+        span(class="caret no_numerical_test" name='name')
+      .title_of_user_test_list.test_passed
+        | Passed
+      .title_of_user_test_list.user_test_result
+        | Result
+        span(class="caret numerical_result" name='name')
     .test_list_region
     .excellent
     .excellent_mark
-      | more then 69%
+      | more then 70%
     .good
     .good_mark
-      | more then 49%
+      | more then 50%
     .not_good
     .bad_mark
       | less

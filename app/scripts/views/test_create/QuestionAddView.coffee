@@ -7,6 +7,14 @@ class NewQuestion extends Marionette.LayoutView
   className: 'new_test_question'
   template: require './templates/add_question'
 
+  events:
+    'click .add_answer'         : 'add_answer'
+    'click .test_remove_button' : 'remove_question'
+    'change #answer'            : 'save_question'
+
+  regions:
+    answer_region: '#answer_region'
+
   initialize: ->
     @model = @model
     @answer_modal = new AnswerCollection()
@@ -16,7 +24,6 @@ class NewQuestion extends Marionette.LayoutView
       @count_number_of_answer()
       @onShow()
     @listenTo @answer_modal, 'change:answer_save', (data) ->
-      console.log 'dscsd'
       n = data.get 'answer_number'
       @model.set 'answer_save_' + n + '', data.get 'answer_save'
     @listenTo @answer_modal, 'change:correct', (data) ->
@@ -39,14 +46,6 @@ class NewQuestion extends Marionette.LayoutView
         correct_answer: @correct
         correct: false
       n++
-
-  events:
-    'click .add_answer'         : 'add_answer'
-    'click .test_remove_button' : 'remove_question'
-    'change #answer'            : 'save_question'
-
-  regions:
-    answer_region: '#answer_region'
 
   count_number_of_answer: ->
     n = 0

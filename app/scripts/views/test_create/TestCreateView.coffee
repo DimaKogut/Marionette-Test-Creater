@@ -17,17 +17,17 @@ module.exports = class TestCreateView extends Marionette.LayoutView
     @listenTo @question_list, 'add', ->
       @add_button()
 
-  ui:
-    text_button: '.test_create_form'
-
   events:
-    'click .add' : 'resize'
-    'click .test_add_button'  : 'add_question'
-    'keypress .cat' : 'add_category'
+    'click .add'             : 'resize'
+    'click .test_add_button' : 'add_question'
+    'keypress .cat'          : 'add_category'
 
   regions:
     question:      '.question_add'
     new_test_main: '.test_create_form'
+
+  ui:
+    text_button: '.test_create_form'
 
   resize: (e) ->
     $(e.currentTarget).addClass('resize')
