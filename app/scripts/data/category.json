@@ -6,9 +6,9 @@ categoryData= {
             "Geography",
             "History",
             "Natural",
-            "Calture",
+            "Culture",
             "Economy",
-            "Cinema"
+            "Movie"
   ]
 }
 subcategoryData= {
@@ -55,7 +55,7 @@ subcategoryData= {
           "AJAX nolige",
           "Web Architecture"
     ],
-    "Calture":[
+    "Culture":[
           "Styling CSS",
           "Backbone",
           "JS Developing",
@@ -69,7 +69,7 @@ subcategoryData= {
           "AJAX nolige",
           "Web Architecture"
     ],
-    "Cinema":[
+    "Movie":[
           "Styling CSS",
           "Backbone",
           "JS Developing",

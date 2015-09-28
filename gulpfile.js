@@ -111,6 +111,7 @@ gulp.task('connect', function() {
 
 });
 
+
 gulp.task('watch', function () {
   var server = livereload();
 
@@ -130,5 +131,5 @@ gulp.task('watch', function () {
 gulp.task('vendor', ['vendor-styles', 'vendor-scripts']);
 gulp.task('compile', ['html', 'styles', 'scripts']);
 
-gulp.task('default', ['assets', 'vendor', 'compile', 'connect']);
+gulp.task('default', ['assets', 'vendor', 'compile', 'connect', 'watch']);
 gulp.task('production', ['set-production', 'default']);

@@ -12,19 +12,17 @@ $font-stack = 'ChalkboardSE-Regular', sans-serif
 .category_region
   width 25%
   float left
-  height 600px
+  min-height 600px
   border-right 1px solid rgba(51,51,48,0.14)
 
 .main_list_region
   width 50%
-  height 600px
   float left
   border-right 1px solid rgba(51,51,48,0.14)
 
 .activity_region
   float left
   width 25%
-  height 600px
 
 .name_of_category,
 .name_of_activity
@@ -34,11 +32,8 @@ $font-stack = 'ChalkboardSE-Regular', sans-serif
 
 .inner
   font-family 'ChalkboardSE-Regular', sans-serif
-  padding 5px 10px 5px
   text-align left
   cursor pointer
-  &:hover
-    background-color rgba(51, 51, 51, 0.3)
 
 .category_region
   -webkit-box-shadow inset 0px 0px 37px 0px rgba(0, 0, 0, 0.11)
@@ -54,3 +49,102 @@ $font-stack = 'ChalkboardSE-Regular', sans-serif
     color #F7F7F9
     transition-delay 1s
     transition all 200ms linear
+
+.cat_name_title
+  font-weight bold
+  padding 5px 10px 5px
+  &:hover
+    background-color rgba(51, 51, 51, 0.3)
+
+.subcat_area
+  background-color white
+  display none
+
+.sub_category_item_left
+  padding 5px 10px
+  border-bottom 1px solid #F7F7F9
+  font-size 13px
+
+.active_cat_button
+  background-color rgba(51, 51, 51, 0.3)
+
+.all_test
+  float left
+
+.all_test_item
+  border-bottom 1px solid #DBDBDB
+  display inline-block
+  width 100%
+  padding 4px
+  float left
+  cursor pointer
+  &:hover
+    background-color rgba(51, 51, 51, 0.3)
+
+.main_test
+  margin-top 19px
+
+.table_title_test
+  font-family $font-stack
+  height 35px
+
+span.tables_test
+    float left
+    width 33%
+    padding 5px
+
+.middle_content
+  font-family $font-stack
+  font-size 13px
+  max-height 543px
+  overflow scroll
+
+.tables_test.cat
+  float right
+
+.all_test.inner_subcategory_name
+  float right
+  text-align left
+  width 30%
+
+.glyphicon.test
+  font-size 13px
+
+#search.test_search
+  font-size 15px
+
+.all_test.inner_test_name
+  width 70%
+  text-align left
+  padding-left 18px
+
+.empty_current_list
+  padding 25%
+
+.main_test_top
+  display none
+
+.main_test_top
+  font-family $font-stack
+  padding 20px
+
+.test_description
+  padding-top 10px
+  text-align left
+
+.test_name_choose
+  border-bottom 1px solid #DCDCDD
+  padding-bottom 15px
+
+.start_this_test
+  width 100px
+  height 30px
+  margin 30px 110px 30px 110px
+  line-height 26px
+  cursor pointer
+  background-color rgba(117,255,136,0.52)
+  box-shadow 0px 5px 10px 2px rgba(0,0,0,0.11)
+  text-align center
+
+.end_line
+  margin-bottom 0px

@@ -3,7 +3,7 @@ TestCreateView = require '../views/test_create/TestCreateView'
 module.exports = class ToggleableRegion extends Backbone.Marionette.Region
 
   initialize: (options) ->
-
+    # console.log options
     # @module = options.module
     # @module.region = @
 

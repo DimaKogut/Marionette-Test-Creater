@@ -9,12 +9,19 @@ class TestListCategoryItem extends Marionette.LayoutView
 
   events:
     'click .show_subcat' : 'show_subcat'
+    'click .cat_name_title' : 'show_cat_list'
 
   regions:
     inner_sub_cat: '.subcat_area'
 
-  show_subcat: ->
-    # App.vent.trigger 'main_category:show_subcat', @model
+  show_cat_list: (e) ->
+    n = @model.get 'category_name'
+    App.vent.trigger 'chack:cat', n
+    $('.active_cat_button').removeClass 'active_cat_button'
+    @$('.show_subcat').parent().addClass 'active_cat_button'
+
+  show_subcat: (e) ->
+    @$('.subcat_area').toggle()
     n = @model.get 'category_name'
     sub_category = subcategoryData["" + n + ""]
     subcategory = new SubCollections()
@@ -23,7 +30,7 @@ class TestListCategoryItem extends Marionette.LayoutView
         subcategory.push
           subcategory_name: data
       @subcategory = subcategory
-    @inner_sub_cat.show = new SubCategoryView collection: @subcategory
+    @inner_sub_cat.show new SubCategoryView collection: @subcategory
 
 module.exports = class TestListCategoryView extends Marionette.CollectionView
 
