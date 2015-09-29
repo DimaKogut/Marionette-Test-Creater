@@ -8,11 +8,13 @@ module.exports = class MainTestCollection extends Marionette.LayoutView
 
   events:
     'keyup .test_search'  : 'showSearchUser'
-    'click .no_numerical' : 'sort_test'
 
   regions:
     main_test_top:  '.main_test_top'
     middle_content: '.middle_content'
+
+  behaviors:
+    SortAction: collection_name: 'currentCollection', model_name: 'TestListCollection'
 
   ui:
     test_name_choose: '.test_name_choose'
@@ -24,6 +26,9 @@ module.exports = class MainTestCollection extends Marionette.LayoutView
     @listenTo App.vent.on 'choose:test', @choose_current_test, @
     @showAll()
 
+  onShow: ->
+    @middle_content.show new AllTestListView collection: @currentCollection
+
   showAll: ->
     currentCollection = new CurrentCollection()
     TestData.forEach (data) ->
@@ -32,10 +37,6 @@ module.exports = class MainTestCollection extends Marionette.LayoutView
         subcategory: data.subcategory
         description: data.description
     @currentCollection = currentCollection
-
-  onShow: ->
-    @middle_content.show new AllTestListView collection: @currentCollection
-    # @rendom_test_offer()
 
   showSearchUser: (e) ->
     currentCollection = new CurrentCollection()
@@ -82,36 +83,3 @@ module.exports = class MainTestCollection extends Marionette.LayoutView
     @ui.test_description.html data.get 'description'
     if $('.main_test_top').is ':hidden'
       $('.main_test_top').slideToggle()
-
-  sort_test: (e) ->
-    filter = $(e.currentTarget).attr 'name'
-    if $(e.currentTarget).hasClass 'descending'
-      @sort_icon_dropdown e.currentTarget
-      reverseSortBy = (sortByFunction) ->
-        (left, right) ->
-          l = sortByFunction(left)
-          r = sortByFunction(right)
-          if l == undefined
-            return -1
-          if r == undefined
-            return 1
-          if l < r then 1 else if l > r then -1 else 0
-
-      @currentCollection.comparator = (UserCollection) ->
-        UserCollection.get filter
-      @currentCollection.comparator = reverseSortBy(@currentCollection.comparator)
-      @currentCollection.sort filter
-    else
-      @sort_icon_dropup e.currentTarget
-      @currentCollection.comparator = filter
-      @currentCollection.sort filter
-
-  sort_icon_dropdown: (selector) ->
-    $(selector).parent().removeClass 'dropup'
-    $('.descending').removeClass 'descending'
-    $(selector).addClass 'ascending'
-
-  sort_icon_dropup: (selector) ->
-    $(selector).parent().addClass 'dropup'
-    $('.ascending').removeClass 'ascending'
-    $(selector).addClass 'descending'

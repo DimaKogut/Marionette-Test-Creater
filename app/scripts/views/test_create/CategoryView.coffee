@@ -20,4 +20,3 @@ module.exports = class CategoryView extends Marionette.CollectionView
   choose_category: (e) ->
     @$('.choose').removeClass 'choose'
     $(e.currentTarget).addClass 'choose'
-

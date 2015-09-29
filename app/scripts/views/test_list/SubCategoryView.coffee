@@ -16,4 +16,3 @@ module.exports = class SubCategoryView extends Marionette.CollectionView
 
   childView: SubCategoryViewItem
   emptyView: ''
-

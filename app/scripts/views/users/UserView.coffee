@@ -1,9 +1,6 @@
 UserTestList = require './UserTestList'
 
-TestListCollection = Backbone.Model.extend({})
-TestListCollections = Backbone.Collection.extend({
-  model: TestListCollection
-})
+TestListCollections = Backbone.Collection.extend({})
 
 class UserEmptyList extends Marionette.ItemView
 
@@ -17,11 +14,12 @@ class UserViewItem extends Marionette.LayoutView
   events:
     'click .u_list_block'      : 'slide_user'
     'click .load_more'         : 'load_more'
-    'click .no_numerical_test' : 'sort_user_tests_no_numerical'
-    'click .numerical_result'  : 'sort_user_tests_numerical'
 
   regions:
     test_list_region: '.test_list_region'
+
+  behaviors:
+    SortAction: collection_name: 'test_list'
 
   slide_user: (e)->
     m = $(e.currentTarget).parent().children()[1]
@@ -94,50 +92,6 @@ class UserViewItem extends Marionette.LayoutView
     if m > 0
       @$('.load_more').show()
       @$('.load_more_value').html m
-
-  sort_user_tests_no_numerical: (e) ->
-    if $(e.currentTarget).hasClass 'descending'
-      @sort_icon_dropdown e.currentTarget
-      reverseSortBy = (sortByFunction) ->
-        (left, right) ->
-          l = sortByFunction(left)
-          r = sortByFunction(right)
-          if l == undefined
-            return -1
-          if r == undefined
-            return 1
-          if l < r then 1 else if l > r then -1 else 0
-
-      @test_list.comparator = (TestListCollection) ->
-        TestListCollection.get 'test_name'
-      @test_list.comparator = reverseSortBy(@test_list.comparator)
-      @test_list.sort 'test_name'
-    else
-      @sort_icon_dropup e.currentTarget
-      @test_list.comparator = 'test_name'
-      @test_list.sort 'test_name'
-
-  sort_user_tests_numerical: (e) ->
-    if $(e.currentTarget).hasClass 'descending'
-      @sort_icon_dropdown e.currentTarget
-      @test_list.comparator = (TestListCollection) ->
-        -TestListCollection.get 'result'
-      @test_list.sort 'result'
-    else
-      @sort_icon_dropup e.currentTarget
-      @test_list.comparator = (TestListCollection) ->
-        +TestListCollection.get 'result'
-      @test_list.sort 'result'
-
-  sort_icon_dropdown: (selector) ->
-    $(selector).parent().removeClass 'dropup'
-    $(selector).removeClass 'descending'
-    $(selector).addClass 'ascending'
-
-  sort_icon_dropup: (selector) ->
-    $(selector).parent().addClass 'dropup'
-    $(selector).removeClass 'ascending'
-    $(selector).addClass 'descending'
 
   load_more: (data)->
     number = UsersTestResult['' +  @model.get 'name' + ''].length

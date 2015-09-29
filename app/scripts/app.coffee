@@ -4,6 +4,7 @@ Marionette.Behaviors.behaviorsLookup = ->
 window.Behaviors = {}
 window.Behaviors.Closeable = require './behaviors/Closeable'
 window.Behaviors.ToolTip = require './behaviors/ToolTip'
+window.Behaviors.SortAction = require './behaviors/SortAction'
 
 ToggleableRegion = require './regions/ToggleableRegion'
 AppView = require './views/AppView'
