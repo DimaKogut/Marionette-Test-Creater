@@ -13,67 +13,34 @@ categoryData= {
 }
 subcategoryData= {
     "English": [
-          "Styling CSS",
-          "Backbone",
-          "JS Developing",
-          "AJAX nolige",
-          "Web Architecture"
+          "English start"
 
     ],
     "IT": [
-          "Backbone",
-          "JS Developing",
-          "AJAX nolige",
-          "Styling CSS",
-          "Web Architecture"
+          "Backend"
     ],
     "Web-UI":[
-          "AJAX nolige",
-          "Styling CSS",
-          "Backbone",
-          "JS Developing",
-          "Web Architecture"
+          "Backbone Framwork",
+          "Markup"
     ],
     "Geography":[
-          "JS Developing",
-          "AJAX nolige",
-          "Styling CSS",
-          "Backbone",
-          "Web Architecture"
+          "Capitals"
     ],
     "History":[
-          "Styling CSS",
-          "Backbone",
-          "JS Developing",
-          "AJAX nolige",
-          "Web Architecture"
+          "World Wars",
+          "Europe XVIII"
     ],
     "Natural":[
-          "Styling CSS",
-          "Backbone",
-          "JS Developing",
-          "AJAX nolige",
-          "Web Architecture"
+          "Tourist"
     ],
     "Culture":[
-          "Styling CSS",
-          "Backbone",
-          "JS Developing",
-          "AJAX nolige",
-          "Web Architecture"
+          "South America History"
     ],
     "Economy":[
-          "Styling CSS",
-          "Backbone",
-          "JS Developing",
-          "AJAX nolige",
-          "Web Architecture"
+          "School program"
     ],
     "Movie":[
-          "Styling CSS",
-          "Backbone",
-          "JS Developing",
-          "AJAX nolige",
-          "Web Architecture"
-    ],
+          "Classic Quiz",
+          "TV Shows Quiz"
+    ]
 }

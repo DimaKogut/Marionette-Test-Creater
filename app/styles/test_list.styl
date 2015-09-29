@@ -1,6 +1,6 @@
 $border = 1px solid rgba(51,51,48,0.14)
 $shadow = 0px 0px 5px 2px rgba(0,0,0,0.11)
-$font-stack = 'ChalkboardSE-Regular', sans-serif
+
 
 .main_test_list
   margin 0px 100.5px 20px 100.5px
@@ -40,7 +40,8 @@ $font-stack = 'ChalkboardSE-Regular', sans-serif
   -moz-box-shadow inset 0px 0px 37px 0px rgba(0, 0, 0, 0.11)
   box-shadow inset 0px 0px 37px 0px rgba(0, 0, 0, 0.11)
 
-.glyphicon.glyphicon-chevron-down
+.glyphicon.glyphicon-chevron-down,
+.glyphicon.glyphicon-chevron-up
   float right
   color #DBDBDB
   transition-delay 1s
@@ -61,9 +62,39 @@ $font-stack = 'ChalkboardSE-Regular', sans-serif
   display none
 
 .sub_category_item_left
+  height 29px
   padding 5px 10px
   border-bottom 1px solid #F7F7F9
   font-size 13px
+  transition-delay 1s
+  transition all 200ms linear
+  .number_of_test_show
+    padding-top 1px
+    padding-left 0px
+    float left
+    font-family $font-title
+    color white
+    transition-delay 1s
+    transition all 200ms linear
+  &:hover
+    .number_of_test_show
+      padding-left 7px
+      font-weight bold
+      transition-delay 1s
+      transition all 200ms linear
+      color rgba(54,195,73, 0.8)
+
+.add_number_of_test
+  color rgba(54,195,73, 0.8)
+  .number_of_test_show
+    padding-left 7px
+    font-weight bold
+    transition-delay 1s
+    transition all 200ms linear
+    color rgba(54,195,73, 0.8)
+
+.subcategory_name_slide
+  float left
 
 .active_cat_button
   background-color rgba(51, 51, 51, 0.3)
@@ -75,7 +106,6 @@ $font-stack = 'ChalkboardSE-Regular', sans-serif
   border-bottom 1px solid #DBDBDB
   display inline-block
   width 100%
-  padding 4px
   float left
   cursor pointer
   &:hover
@@ -106,6 +136,7 @@ span.tables_test
   float right
   text-align left
   width 30%
+  padding 4px 4px 4px 2px
 
 .glyphicon.test
   font-size 13px
@@ -116,7 +147,7 @@ span.tables_test
 .all_test.inner_test_name
   width 70%
   text-align left
-  padding-left 18px
+  padding 4px 0px 4px 22px
 
 .empty_current_list
   padding 25%
@@ -148,3 +179,61 @@ span.tables_test
 
 .end_line
   margin-bottom 0px
+
+.activity_single_item
+  font-family $font-stack
+  border-bottom 1px solid #DBDBDB
+  margin 5px 10px 5px
+  text-align left
+  float left
+
+  font-size 13px
+
+.test_activity_result:after
+  content '%'
+
+.activity_text
+  color #A9A9AE
+  padding-right 7px
+
+.test_activity_result
+  padding-left 7px
+
+.test_activity_name
+  transition-delay 1s
+  transition all 200ms linear
+  cursor pointer
+  margin-bottom 8px
+  &:hover
+    color rgba(54,195,73,0.6)
+    transition-delay 1s
+    transition all 200ms linear
+    border-bottom 1px solid rgba(54,195,73,0.6)
+
+.tooltip
+  &.top
+    .tooltip-inner
+      background-color rgba(54,195,73,0.6)
+      color #333
+    .tooltip-arrow
+      border-top-color rgba(54,195,73,0.6)
+
+.load_more_activity
+  display none
+  float right
+  font-family $font-stack
+  font-size 13px
+  color #A9A9AE
+  cursor pointer
+  margin 0px 10px 10px
+  &:hover
+    color #333
+
+.activity_single_item:last-child
+  margin-bottom 15px
+
+.containar_test_list
+  display flex
+
+.glyphicon.glyphicon-list-alt
+  float right

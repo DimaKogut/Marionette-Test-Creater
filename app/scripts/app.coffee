@@ -3,6 +3,7 @@ Marionette.Behaviors.behaviorsLookup = ->
 
 window.Behaviors = {}
 window.Behaviors.Closeable = require './behaviors/Closeable'
+window.Behaviors.ToolTip = require './behaviors/ToolTip'
 
 ToggleableRegion = require './regions/ToggleableRegion'
 AppView = require './views/AppView'
@@ -13,6 +14,7 @@ ContentModule = require './modules/ContentModules'
 DataJson = require './data/category.json'
 TestData = require './data/test'
 UsersData = require './data/users'
+ActivityData = require './data/activity'
 
 class App extends Backbone.Marionette.Application
   initialize: =>

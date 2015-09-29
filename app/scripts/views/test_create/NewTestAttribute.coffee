@@ -16,6 +16,9 @@ module.exports = class TestAttribute extends Marionette.LayoutView
     category_region:    '.left_cat_region'
     subcategory_region: '.right_sub_region'
 
+  behaviors:
+    ToolTip: text: 'Add new name and push Enter', className: '.cat'
+
   ui:
     category_specify:    '.parent_specify'
     subcategory_specify: '.child_specify'

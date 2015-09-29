@@ -5,10 +5,7 @@ class CategoryItem extends Marionette.ItemView
   template: require './templates/category_item_view'
 
   events:
-    'click .inner' : 'sub_list_show'
-
-  sub_list_show: ->
-    App.vent.trigger 'choose:category', @model
+    'click .inner' : -> App.vent.trigger 'choose:category', @model
 
 module.exports = class CategoryView extends Marionette.CollectionView
 

@@ -4,10 +4,7 @@ class CurrentCategoryList extends Marionette.ItemView
   template: require './templates/all_test_item'
 
   events:
-    'click .containar_test_list' : 'choose_test'
-
-  choose_test: ->
-    App.vent.trigger 'choose:test', @model
+    'click .containar_test_list' : -> App.vent.trigger 'choose:test', @model
 
 class CurrentCategoryListEmpty extends Marionette.ItemView
 

@@ -10,10 +10,7 @@ class SubCategoryItem extends Marionette.ItemView
   template: require './templates/subcategory_item_view'
 
   events:
-    'click .inner_sub' : 'sub_category_choose'
-
-  sub_category_choose: ->
-    App.vent.trigger 'choose:subcategory', @model.get 'subcategory_name'
+    'click .inner_sub' : -> App.vent.trigger 'choose:subcategory', @model.get 'subcategory_name'
 
 module.exports = class SubCategoryView extends Marionette.CollectionView
 
