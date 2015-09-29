@@ -1,8 +1,8 @@
 module.exports = class SortAction extends Marionette.Behavior
 
   events:
-    'click .no_numerical'      : 'sort_collection_no_numarical'
-    'click .numerical'         : 'sort_collection_numarical'
+    'click .no_numerical' : 'sort_collection_no_numarical'
+    'click .numerical'    : 'sort_collection_numarical'
 
   sort_collection_no_numarical: (e) ->
     collection = @options.collection_name
