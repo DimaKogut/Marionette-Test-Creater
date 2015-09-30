@@ -14,8 +14,8 @@ module.exports = class UserListView extends Marionette.LayoutView
   regions:
     list: '#list'
 
-  # behaviors:
-  #   SortAction: collection_name: 'user_collection'
+  behaviors:
+    SortAction: collection_name: 'user_collection'
 
   initialize: ->
     $('.navigator_active').removeClass 'navigator_active'

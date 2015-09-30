@@ -31,7 +31,7 @@ ActivityData= [
   },
   {
           "name":"Brice Monroe",
-          "test_name":"The World War I:German ocuped France",
+          "test_name":"German occupation of France",
           "description": " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis vero tempora tenetur suscipit, deleniti, enim iste possimus non maiores pariatur modi, minima consequuntur adipisci cum placeat. Alias officiis est, cum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis vero tempora tenetur suscipit, deleniti, enim iste possimus non maiores pariatur modi, minima consequuntur adipisci cum placeat. Alias officiis est, cum.",
           "result": 75
   },
@@ -55,7 +55,7 @@ ActivityData= [
   },
   {
           "name":"Russell Kiefer",
-          "test_name":"The World War I:German ocuped France",
+          "test_name":"German occupation of France",
           "description": " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis vero tempora tenetur suscipit, deleniti, enim iste possimus non maiores pariatur modi, minima consequuntur adipisci cum placeat. Alias officiis est, cum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis vero tempora tenetur suscipit, deleniti, enim iste possimus non maiores pariatur modi, minima consequuntur adipisci cum placeat. Alias officiis est, cum.",
           "result": 75
   },

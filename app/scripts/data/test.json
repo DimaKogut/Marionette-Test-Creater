@@ -1,80 +1,946 @@
   TestData= [
   {
-          "test_name":"The World War I:German ocuped France",
+          "test_name":"German occupation of France",
+          "id": "1",
           "subcategory":"World Wars",
           "category": "History",
           "description": " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis vero tempora tenetur suscipit, deleniti, enim iste possimus non maiores pariatur modi, minima consequuntur adipisci cum placeat. Alias officiis est, cum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis vero tempora tenetur suscipit, deleniti, enim iste possimus non maiores pariatur modi, minima consequuntur adipisci cum placeat. Alias officiis est, cum."
   },
   {
           "test_name":"Great Breatan: Impaire History",
+          "id": "2",
           "subcategory":"Europe XVIII",
           "category": "History",
           "description": " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis vero tempora tenetur suscipit, deleniti, enim iste possimus non maiores pariatur modi, minima consequuntur adipisci cum placeat. Alias officiis est, cum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. "
   },
   {
           "test_name":"Web-UI: CSS3",
+          "id": "3",
           "subcategory":"Markup",
           "category": "Web-UI",
           "description": " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis vero tempora tenetur suscipit, deleniti, enim iste possimus non maiores pariatur modi, minima consequuntur adipisci cum placeat. Alias officiis est, cum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis vero tempora tenetur suscipit, deleniti, enim iste possimus non maiores pariatur modi, minima consequuntur adipisci cum placeat. Alias officiis est, cum. Nobis vero tempora tenetur suscipit, deleniti, enim iste possimus non maiores pariatur modi, minima consequuntur adipisci cum placeat. Alias officiis est, cum."
   },
   {
           "test_name":"Ruby on Rails:Begining",
+          "id": "4",
           "subcategory":"Backend",
           "category": "IT",
           "description": " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis vero tempora tenetur suscipit, deleniti, enim iste possimus non maiores pariatur modi, minima consequuntur adipisci cum placeat. Alias officiis est, cum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis vero tempora tenetur suscipit, deleniti, enim iste possimus non maiores pariatur modi, minima consequuntur adipisci cum placeat. Alias officiis est, cum."
   },
   {
           "test_name":"Estwood National Park",
+          "id": "5",
           "subcategory":"Tourist",
           "category": "Natural",
           "description": " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis vero tempora tenetur suscipit, deleniti, enim iste possimus non maiores pariatur modi, minima consequuntur adipisci cum placeat. Alias officiis est, cum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis vero tempora tenetur suscipit, deleniti, enim iste possimus non maiores pariatur modi, minima consequuntur adipisci cum placeat. Alias officiis est, cum. Nobis vero tempora tenetur suscipit, deleniti, enim iste possimus non maiores pariatur modi, minima consequuntur adipisci cum placeat. Alias officiis est, cum. Nobis vero tempora tenetur suscipit, deleniti, enim iste possimus non maiores pariatur modi, minima consequuntur adipisci cum placeat. Alias officiis est, cum."
   },
   {
           "test_name":"USA Economy",
+          "id": "6",
           "subcategory":"School program",
           "category": "Economy",
           "description": " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis vero tempora tenetur suscipit, deleniti, enim iste possimus non maiores pariatur modi, minima consequuntur adipisci cum placeat. Alias officiis est, cum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis vero tempora tenetur suscipit, deleniti, enim iste possimus non maiores pariatur modi, minima consequuntur adipisci cum placeat. Alias officiis est, cum. Nobis vero tempora tenetur suscipit, deleniti, enim iste possimus non maiores pariatur modi, minima consequuntur adipisci cum placeat. Alias officiis est, cum."
   },
   {
           "test_name":"Movies",
+          "id": "7",
           "subcategory":"Classic Quiz",
           "category": "Movie",
           "description": " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis vero tempora tenetur suscipit, deleniti, enim iste possimus non maiores pariatur modi, minima consequuntur adipisci cum placeat. Alias officiis est, cum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis vero tempora tenetur suscipit, deleniti, enim iste possimus non maiores pariatur modi, minima consequuntur adipisci cum placeat. Alias officiis est, cum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis vero tempora tenetur suscipit, deleniti, enim iste possimus non maiores pariatur modi, minima consequuntur adipisci cum placeat. Alias officiis est, cum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis vero tempora tenetur suscipit, deleniti, enim iste possimus non maiores pariatur modi, minima consequuntur adipisci cum placeat. Alias officiis est, cum."
   },
   {
           "test_name":"Europe",
+          "id": "8",
           "subcategory":"Capitals",
           "category": "Geography",
           "description": " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis vero tempora tenetur suscipit, deleniti, enim iste possimus non maiores pariatur modi, minima consequuntur adipisci cum placeat. Alias officiis est, cum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis vero tempora tenetur suscipit, deleniti, enim iste possimus non maiores pariatur modi, minima consequuntur adipisci cum placeat. Alias officiis est, cum. Nobis vero tempora tenetur suscipit, deleniti, enim iste possimus non maiores pariatur modi, minima consequuntur adipisci cum placeat. Alias officiis est, cum."
   },
   {
           "test_name":"Oscar Show",
+          "id": "9",
           "subcategory":"TV Shows Quiz",
           "category": "Movie",
           "description": " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis vero tempora tenetur suscipit, deleniti, enim iste possimus non maiores pariatur modi, minima consequuntur adipisci cum placeat. Alias officiis est, cum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis vero tempora tenetur suscipit, deleniti, enim iste possimus non maiores pariatur modi, minima consequuntur adipisci cum placeat. Alias officiis est, cum."
   },
   {
           "test_name":"Famius actors in the world",
+          "id": "10",
           "subcategory":"Classic Quiz",
           "category": "Movie",
           "description": " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis vero tempora tenetur suscipit, deleniti, enim iste possimus non maiores pariatur modi, minima consequuntur adipisci cum placeat. Alias officiis est, cum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis vero tempora tenetur suscipit, deleniti, enim iste possimus non maiores pariatur modi, minima consequuntur adipisci cum placeat. Alias officiis est, cum. Nobis vero tempora tenetur suscipit, deleniti, enim iste possimus non maiores pariatur modi, minima consequuntur adipisci cum placeat. Alias officiis est, cum. Nobis vero tempora tenetur suscipit, deleniti, enim iste possimus non maiores pariatur modi, minima consequuntur adipisci cum placeat. Alias officiis est, cum."
   },
   {
           "test_name":"Calture of Maya",
+          "id": "11",
           "subcategory":"South America History",
           "category": "Culture",
           "description": " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis vero tempora tenetur suscipit, deleniti, enim iste possimus non maiores pariatur modi, minima consequuntur adipisci cum placeat. Alias officiis est, cum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis vero tempora tenetur suscipit, deleniti, enim iste possimus non maiores pariatur modi, minima consequuntur adipisci cum placeat. Alias officiis est, cum. Nobis vero tempora tenetur suscipit, deleniti, enim iste possimus non maiores pariatur modi, minima consequuntur adipisci cum placeat. Alias officiis est, cum."
   },
   {
           "test_name":"Marionette Basic skill quiz",
+          "id": "12",
           "subcategory":"Backbone Framwork",
           "category": "Web-UI",
           "description": " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis vero tempora tenetur suscipit, deleniti, enim iste possimus non maiores pariatur modi, minima consequuntur adipisci cum placeat. Alias officiis est, cum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis vero tempora tenetur suscipit, deleniti, enim iste possimus non maiores pariatur modi, minima consequuntur adipisci cum placeat. Alias officiis est, cum. Nobis vero tempora tenetur suscipit, deleniti, enim iste possimus non maiores pariatur modi, minima consequuntur adipisci cum placeat. Alias officiis est, cum. Nobis vero tempora tenetur suscipit, deleniti, enim iste possimus non maiores pariatur modi, minima consequuntur adipisci cum placeat. Alias officiis est, cum. Nobis vero tempora tenetur suscipit, deleniti, enim iste possimus non maiores pariatur modi, minima consequuntur adipisci cum placeat. Alias officiis est, cum."
   },
   {
           "test_name":"Check your english lvl",
+          "id": "13",
           "subcategory":"English start",
           "category": "English",
           "description": " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis vero tempora tenetur suscipit, deleniti, enim iste possimus non maiores pariatur modi, minima consequuntur adipisci cum placeat. Alias officiis est, cum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis vero tempora tenetur suscipit, deleniti, enim iste possimus non maiores pariatur modi, minima consequuntur adipisci cum placeat. Alias officiis est, cum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis vero tempora tenetur suscipit, deleniti, enim iste possimus non maiores pariatur modi, minima consequuntur adipisci cum placeat. Alias officiis est, cum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis vero tempora tenetur suscipit, deleniti, enim iste possimus non maiores pariatur modi, minima consequuntur adipisci cum placeat. Alias officiis est, cum."
   }
 ]
+TestQuestionData={
+  "1": [
+    "question",
+    "question",
+    "question",
+    "question",
+    "question",
+    "question",
+    "question",
+    "question",
+    "question",
+    "question"
+  ],
+  "2": [
+    "question",
+    "question",
+    "question",
+    "question",
+    "question",
+    "question",
+    "question",
+    "question",
+    "question",
+    "question"
+  ],
+  "3": [
+    "question",
+    "question",
+    "question",
+    "question",
+    "question",
+    "question",
+    "question",
+    "question",
+    "question",
+    "question"
+  ],
+  "4": [
+    "question",
+    "question",
+    "question",
+    "question",
+    "question",
+    "question",
+    "question",
+    "question",
+    "question",
+    "question"
+  ],
+  "5": [
+    "question",
+    "question",
+    "question",
+    "question",
+    "question",
+    "question",
+    "question",
+    "question",
+    "question",
+    "question"
+  ],
+  "6": [
+    "question",
+    "question",
+    "question",
+    "question",
+    "question",
+    "question",
+    "question",
+    "question",
+    "question",
+    "question"
+  ],
+  "7": [
+    "question",
+    "question",
+    "question",
+    "question",
+    "question",
+    "question",
+    "question",
+    "question",
+    "question",
+    "question"
+  ],
+  "8": [
+    "question",
+    "question",
+    "question",
+    "question",
+    "question",
+    "question",
+    "question",
+    "question",
+    "question",
+    "question"
+  ],
+  "9": [
+    "question",
+    "question",
+    "question",
+    "question",
+    "question",
+    "question",
+    "question",
+    "question",
+    "question",
+    "question"
+  ],
+  "10": [
+    "question",
+    "question",
+    "question",
+    "question",
+    "question",
+    "question",
+    "question",
+    "question",
+    "question",
+    "question"
+  ],
+  "11": [
+    "question",
+    "question",
+    "question",
+    "question",
+    "question",
+    "question",
+    "question",
+    "question",
+    "question",
+    "question"
+  ],
+  "12": [
+    "question",
+    "question",
+    "question",
+    "question",
+    "question",
+    "question",
+    "question",
+    "question",
+    "question",
+    "question"
+  ],
+  "13": [
+    "question",
+    "question",
+    "question",
+    "question",
+    "question",
+    "question",
+    "question",
+    "question",
+    "question",
+    "question"
+  ]
+}
+
+TestAnswerData={
+    "1": {
+          "1": [
+              "first",
+              "second",
+              "third"
+          ],
+          "2": [
+              "first",
+              "second",
+              "third"
+          ],
+          "3": [
+              "first",
+              "second",
+              "third"
+          ],
+          "4": [
+              "first",
+              "second",
+              "third"
+          ],
+          "5": [
+              "first",
+              "second",
+              "third"
+          ],
+          "6": [
+              "first",
+              "second",
+              "third"
+          ],
+          "7": [
+              "first",
+              "second",
+              "third"
+          ],
+          "8": [
+              "first",
+              "second",
+              "third"
+          ],
+          "9": [
+              "first",
+              "second",
+              "third"
+          ],
+          "10": [
+              "first",
+              "second",
+              "third"
+          ]
+    },
+    "2": {
+          "1": [
+              "first",
+              "second",
+              "third"
+          ],
+          "2": [
+              "first",
+              "second",
+              "third"
+          ],
+          "3": [
+              "first",
+              "second",
+              "third"
+          ],
+          "4": [
+              "first",
+              "second",
+              "third"
+          ],
+          "5": [
+              "first",
+              "second",
+              "third"
+          ],
+          "6": [
+              "first",
+              "second",
+              "third"
+          ],
+          "7": [
+              "first",
+              "second",
+              "third"
+          ],
+          "8": [
+              "first",
+              "second",
+              "third"
+          ],
+          "9": [
+              "first",
+              "second",
+              "third"
+          ],
+          "10": [
+              "first",
+              "second",
+              "third"
+          ]
+    },
+    "3": {
+          "1": [
+              "first",
+              "second",
+              "third"
+          ],
+          "2": [
+              "first",
+              "second",
+              "third"
+          ],
+          "3": [
+              "first",
+              "second",
+              "third"
+          ],
+          "4": [
+              "first",
+              "second",
+              "third"
+          ],
+          "5": [
+              "first",
+              "second",
+              "third"
+          ],
+          "6": [
+              "first",
+              "second",
+              "third"
+          ],
+          "7": [
+              "first",
+              "second",
+              "third"
+          ],
+          "8": [
+              "first",
+              "second",
+              "third"
+          ],
+          "9": [
+              "first",
+              "second",
+              "third"
+          ],
+          "10": [
+              "first",
+              "second",
+              "third"
+          ]
+    },
+    "4": {
+          "1": [
+              "first",
+              "second",
+              "third"
+          ],
+          "2": [
+              "first",
+              "second",
+              "third"
+          ],
+          "3": [
+              "first",
+              "second",
+              "third"
+          ],
+          "4": [
+              "first",
+              "second",
+              "third"
+          ],
+          "5": [
+              "first",
+              "second",
+              "third"
+          ],
+          "6": [
+              "first",
+              "second",
+              "third"
+          ],
+          "7": [
+              "first",
+              "second",
+              "third"
+          ],
+          "8": [
+              "first",
+              "second",
+              "third"
+          ],
+          "9": [
+              "first",
+              "second",
+              "third"
+          ],
+          "10": [
+              "first",
+              "second",
+              "third"
+          ]
+    },
+    "5": {
+          "1": [
+              "first",
+              "second",
+              "third"
+          ],
+          "2": [
+              "first",
+              "second",
+              "third"
+          ],
+          "3": [
+              "first",
+              "second",
+              "third"
+          ],
+          "4": [
+              "first",
+              "second",
+              "third"
+          ],
+          "5": [
+              "first",
+              "second",
+              "third"
+          ],
+          "6": [
+              "first",
+              "second",
+              "third"
+          ],
+          "7": [
+              "first",
+              "second",
+              "third"
+          ],
+          "8": [
+              "first",
+              "second",
+              "third"
+          ],
+          "9": [
+              "first",
+              "second",
+              "third"
+          ],
+          "10": [
+              "first",
+              "second",
+              "third"
+          ]
+    },
+    "6": {
+          "1": [
+              "first",
+              "second",
+              "third"
+          ],
+          "2": [
+              "first",
+              "second",
+              "third"
+          ],
+          "3": [
+              "first",
+              "second",
+              "third"
+          ],
+          "4": [
+              "first",
+              "second",
+              "third"
+          ],
+          "5": [
+              "first",
+              "second",
+              "third"
+          ],
+          "6": [
+              "first",
+              "second",
+              "third"
+          ],
+          "7": [
+              "first",
+              "second",
+              "third"
+          ],
+          "8": [
+              "first",
+              "second",
+              "third"
+          ],
+          "9": [
+              "first",
+              "second",
+              "third"
+          ],
+          "10": [
+              "first",
+              "second",
+              "third"
+          ]
+    },
+    "7": {
+          "1": [
+              "first",
+              "second",
+              "third"
+          ],
+          "2": [
+              "first",
+              "second",
+              "third"
+          ],
+          "3": [
+              "first",
+              "second",
+              "third"
+          ],
+          "4": [
+              "first",
+              "second",
+              "third"
+          ],
+          "5": [
+              "first",
+              "second",
+              "third"
+          ],
+          "6": [
+              "first",
+              "second",
+              "third"
+          ],
+          "7": [
+              "first",
+              "second",
+              "third"
+          ],
+          "8": [
+              "first",
+              "second",
+              "third"
+          ],
+          "9": [
+              "first",
+              "second",
+              "third"
+          ],
+          "10": [
+              "first",
+              "second",
+              "third"
+          ]
+    },
+    "8": {
+          "1": [
+              "first",
+              "second",
+              "third"
+          ],
+          "2": [
+              "first",
+              "second",
+              "third"
+          ],
+          "3": [
+              "first",
+              "second",
+              "third"
+          ],
+          "4": [
+              "first",
+              "second",
+              "third"
+          ],
+          "5": [
+              "first",
+              "second",
+              "third"
+          ],
+          "6": [
+              "first",
+              "second",
+              "third"
+          ],
+          "7": [
+              "first",
+              "second",
+              "third"
+          ],
+          "8": [
+              "first",
+              "second",
+              "third"
+          ],
+          "9": [
+              "first",
+              "second",
+              "third"
+          ],
+          "10": [
+              "first",
+              "second",
+              "third"
+          ]
+    },
+    "9": {
+          "1": [
+              "first",
+              "second",
+              "third"
+          ],
+          "2": [
+              "first",
+              "second",
+              "third"
+          ],
+          "3": [
+              "first",
+              "second",
+              "third"
+          ],
+          "4": [
+              "first",
+              "second",
+              "third"
+          ],
+          "5": [
+              "first",
+              "second",
+              "third"
+          ],
+          "6": [
+              "first",
+              "second",
+              "third"
+          ],
+          "7": [
+              "first",
+              "second",
+              "third"
+          ],
+          "8": [
+              "first",
+              "second",
+              "third"
+          ],
+          "9": [
+              "first",
+              "second",
+              "third"
+          ],
+          "10": [
+              "first",
+              "second",
+              "third"
+          ]
+    },
+    "10": {
+          "1": [
+              "first",
+              "second",
+              "third"
+          ],
+          "2": [
+              "first",
+              "second",
+              "third"
+          ],
+          "3": [
+              "first",
+              "second",
+              "third"
+          ],
+          "4": [
+              "first",
+              "second",
+              "third"
+          ],
+          "5": [
+              "first",
+              "second",
+              "third"
+          ],
+          "6": [
+              "first",
+              "second",
+              "third"
+          ],
+          "7": [
+              "first",
+              "second",
+              "third"
+          ],
+          "8": [
+              "first",
+              "second",
+              "third"
+          ],
+          "9": [
+              "first",
+              "second",
+              "third"
+          ],
+          "10": [
+              "first",
+              "second",
+              "third"
+          ]
+    },
+    "11": {
+          "1": [
+              "first",
+              "second",
+              "third"
+          ],
+          "2": [
+              "first",
+              "second",
+              "third"
+          ],
+          "3": [
+              "first",
+              "second",
+              "third"
+          ],
+          "4": [
+              "first",
+              "second",
+              "third"
+          ],
+          "5": [
+              "first",
+              "second",
+              "third"
+          ],
+          "6": [
+              "first",
+              "second",
+              "third"
+          ],
+          "7": [
+              "first",
+              "second",
+              "third"
+          ],
+          "8": [
+              "first",
+              "second",
+              "third"
+          ],
+          "9": [
+              "first",
+              "second",
+              "third"
+          ],
+          "10": [
+              "first",
+              "second",
+              "third"
+          ]
+    },
+    "12": {
+          "1": [
+              "first",
+              "second",
+              "third"
+          ],
+          "2": [
+              "first",
+              "second",
+              "third"
+          ],
+          "3": [
+              "first",
+              "second",
+              "third"
+          ],
+          "4": [
+              "first",
+              "second",
+              "third"
+          ],
+          "5": [
+              "first",
+              "second",
+              "third"
+          ],
+          "6": [
+              "first",
+              "second",
+              "third"
+          ],
+          "7": [
+              "first",
+              "second",
+              "third"
+          ],
+          "8": [
+              "first",
+              "second",
+              "third"
+          ],
+          "9": [
+              "first",
+              "second",
+              "third"
+          ],
+          "10": [
+              "first",
+              "second",
+              "third"
+          ]
+    },
+    "13": {
+          "1": [
+              "first",
+              "second",
+              "third"
+          ],
+          "2": [
+              "first",
+              "second",
+              "third"
+          ],
+          "3": [
+              "first",
+              "second",
+              "third"
+          ],
+          "4": [
+              "first",
+              "second",
+              "third"
+          ],
+          "5": [
+              "first",
+              "second",
+              "third"
+          ],
+          "6": [
+              "first",
+              "second",
+              "third"
+          ],
+          "7": [
+              "first",
+              "second",
+              "third"
+          ],
+          "8": [
+              "first",
+              "second",
+              "third"
+          ],
+          "9": [
+              "first",
+              "second",
+              "third"
+          ],
+          "10": [
+              "first",
+              "second",
+              "third"
+          ]
+    }
+}
+
+TestCorrectAnswerData={
+  "1": [1,2,3,3,2,1,2,3,2,1],
+  "2": [1,2,3,3,2,1,2,3,2,1],
+  "3": [1,2,3,3,2,1,2,3,2,1],
+  "4": [1,2,3,3,2,1,2,3,2,1],
+  "5": [1,2,3,3,2,1,2,3,2,1],
+  "6": [1,2,3,3,2,1,2,3,2,1],
+  "7": [1,2,3,3,2,1,2,3,2,1],
+  "8": [1,2,3,3,2,1,2,3,2,1],
+  "9": [1,2,3,3,2,1,2,3,2,1],
+  "10": [1,2,3,3,2,1,2,3,2,1],
+  "11": [1,2,3,3,2,1,2,3,2,1],
+  "12": [1,2,3,3,2,1,2,3,2,1],
+  "13": [1,2,3,3,2,1,2,3,2,1]
+}

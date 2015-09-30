@@ -14,11 +14,12 @@ module.exports = class MainTestCollection extends Marionette.LayoutView
     middle_content: '.middle_content'
 
   behaviors:
-    SortAction: collection_name: 'currentCollection', model_name: 'TestListCollection'
+    SortAction: collection_name: 'currentCollection'
 
   ui:
     test_name_choose: '.test_name_choose'
     test_description: '.test_description'
+    test_link:        '.test_link'
 
   initialize: ->
     @listenTo App.vent.on 'chack:cat', @render_category_list, @
@@ -36,25 +37,20 @@ module.exports = class MainTestCollection extends Marionette.LayoutView
         test_name:   data.test_name
         subcategory: data.subcategory
         description: data.description
+        id:          data.id
     @currentCollection = currentCollection
 
   showSearchUser: (e) ->
     currentCollection = new CurrentCollection()
     search = $(e.currentTarget).val().toLowerCase()
-    if @value != undefined
-      @value.models.forEach (data) ->
-        if data.get('test_name').toLowerCase().search(search) != - 1 || data.get('subcategory').toLowerCase().search(search) != - 1
-          currentCollection.push
-            test_name:   data.get('test_name')
-            subcategory: data.get('subcategory')
-            description: data.get('description')
-    else
-      TestData.forEach (data) ->
-        if data.test_name.toLowerCase().search(search) != - 1 || data.subcategory.toLowerCase().search(search) != - 1
-          currentCollection.push
-            test_name:   data.test_name
-            subcategory: data.subcategory
-            description: data.description
+    console.log @currentCollection
+    TestData.forEach (data) ->
+      if data.test_name.toLowerCase().search(search) != - 1 || data.subcategory.toLowerCase().search(search) != - 1
+        currentCollection.push
+          test_name:   data.test_name
+          subcategory: data.subcategory
+          description: data.description
+          id:          data.id
     @currentCollection = currentCollection
     @onShow()
 
@@ -63,23 +59,25 @@ module.exports = class MainTestCollection extends Marionette.LayoutView
       @onShow @showAll()
     else
       category_name = data
-      value = new CurrentCollection()
+      currentCollection = new CurrentCollection()
       TestData.forEach (name) ->
         if name.category == category_name
-          value.push name
-      @value = value
-      @middle_content.show new AllTestListView collection: @value
+          currentCollection.push name
+      @currentCollection = currentCollection
+      @middle_content.show new AllTestListView collection: @currentCollection
 
   render_category_list_by_subcat: (data) ->
-    value = new CurrentCollection()
+    currentCollection = new CurrentCollection()
     TestData.forEach (name) ->
       if name.subcategory == data.get 'subcategory_name'
-        value.push name
-    @value = value
-    @middle_content.show new AllTestListView collection: @value
+        currentCollection.push name
+    @currentCollection = currentCollection
+    @middle_content.show new AllTestListView collection: @currentCollection
 
   choose_current_test: (data) ->
     @ui.test_name_choose.html data.get 'test_name'
     @ui.test_description.html data.get 'description'
+    @ui.test_link.attr 'href', '#test/' + data.get 'id' + ''
+    # @ui.test_link.attr 'href', 'test'
     if $('.main_test_top').is ':hidden'
       $('.main_test_top').slideToggle()
