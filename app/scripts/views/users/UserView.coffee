@@ -18,8 +18,8 @@ class UserViewItem extends Marionette.LayoutView
   regions:
     test_list_region: '.test_list_region'
 
-  # behaviors:
-  #   SortAction: collection_name: 'test_list'
+  behaviors:
+    SortAction: collection_name: 'test_list'
 
   slide_user: (e)->
     m = $(e.currentTarget).parent().children()[1]
